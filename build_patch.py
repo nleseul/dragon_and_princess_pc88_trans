@@ -59,8 +59,6 @@ def patch_in_translations(buf, bounds_list, lookup):
                     encoded_translated_text = encoded_translated_text[:len(original_text)]
                 encoded_translated_text = encoded_translated_text.ljust(len(original_text), b'\x20')
 
-                print("{0} -> {1}".format(original_text, encoded_translated_text))
-
                 buf[bounds[0]:bounds[1]] = encoded_translated_text
 
         except (UnicodeDecodeError, KeyError, IndexError):
