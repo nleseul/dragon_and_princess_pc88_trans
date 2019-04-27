@@ -36,17 +36,17 @@ Return,,,
  ,,,
   ,,,
 Command ? ,,,
-ﾀｲﾍﾝﾀﾞ !! ｼｮｸﾘｮｳｶﾞ ｿｺｦ ﾂｲﾀ !!,,大変だ！！ 食糧が底をついた！！,Oh no!! You're out of food!!
-ﾑｽﾒﾊ ｷｴﾀ..,,娘は消えた..,The girl disappears..
-ｱﾅﾀﾊ ﾜﾅﾆｵﾁﾃｲﾏｽ,,あなたは罠に落ちています,You've fallen in a trap
-ｳｴｶﾗ ｺｴｶﾞｼﾏｽ:｢ﾅﾜﾊﾞｼｺﾞﾊ 300K ﾃﾞｽｾﾞ..｣,,上から声がします:「縄はしごは300Kですぜ..」,A voice from above: 「300K for a rope ladder..」
-ﾜｶｲﾑｽﾒﾆﾃﾞｱｲ ｲｴﾏﾃﾞｱﾝﾅｲｻﾚﾏｼﾀ,,若い娘に出会い 家まで案内されました。,"Encountering a young girl, you were guided to the house."
-ﾄﾞｱｰﾉﾄｺﾛﾃﾞ ﾑｽﾒｶﾞﾃﾏﾈｷｼﾃﾏｽ,,ドアーの所で娘が手招きしてます,"Near the door, a girl is beckoning"
-* ｼｮｸﾘｮｳｶﾞﾅｲﾉﾃﾞ ﾐﾝﾅ ｵﾅｶｶﾞｽｲﾃﾏｽ,,* 食糧がないので 皆 お腹が空いてます,"* There's no food, and everyone is hungry"
+ﾀｲﾍﾝﾀﾞ !! ｼｮｸﾘｮｳｶﾞ ｿｺｦ ﾂｲﾀ !!,Oh no!! You're out of food!!,大変だ！！ 食糧が底をついた！！,Oh no!! You're out of food!!
+ﾑｽﾒﾊ ｷｴﾀ..,She left..,娘は消えた..,The girl disappears..
+ｱﾅﾀﾊ ﾜﾅﾆｵﾁﾃｲﾏｽ,You're trapped,あなたは罠に落ちています,You've fallen in a trap
+ｳｴｶﾗ ｺｴｶﾞｼﾏｽ:｢ﾅﾜﾊﾞｼｺﾞﾊ 300K ﾃﾞｽｾﾞ..｣,Voice from above:｢300K for a rope..｣,上から声がします:「縄はしごは300Kですぜ..」,A voice from above: 「300K for a rope ladder..」
+ﾜｶｲﾑｽﾒﾆﾃﾞｱｲ ｲｴﾏﾃﾞｱﾝﾅｲｻﾚﾏｼﾀ,She leads you to a house.,若い娘に出会い 家まで案内されました。,"Encountering a young girl, you were guided to the house."
+ﾄﾞｱｰﾉﾄｺﾛﾃﾞ ﾑｽﾒｶﾞﾃﾏﾈｷｼﾃﾏｽ,She beckons by the door.,ドアーの所で娘が手招きしてます,"Near the door, a girl is beckoning"
+* ｼｮｸﾘｮｳｶﾞﾅｲﾉﾃﾞ ﾐﾝﾅ ｵﾅｶｶﾞｽｲﾃﾏｽ,* No food; you're all hungry,* 食糧がないので 皆 お腹が空いてます,"* There's no food, and everyone is hungry"
 Ok ,,,
-ﾜﾅ ﾆ ｵﾁﾃｼﾏｯﾀ !,,罠に落ちてしまった！,You fell in a trap!
-ｳｯ! ﾄﾞｱｰ ﾆ ﾌﾞﾂｹﾀ... ｲﾀｲｾﾞ ｸｿｯ!,,うっ！ ドアーにぶつけた... いたいぜ くそっ！,"Oof! You ran into the door... Poop, it hurts!"
-ﾋﾛﾏﾆ ﾓﾄﾞｯﾃﾗﾚﾅｲﾃﾞｼｮｳ?,,広間に戻ってられないでしょう？,Can't you go back to the great hall [of the castle]?
+ﾜﾅ ﾆ ｵﾁﾃｼﾏｯﾀ !,A pit trap!!,罠に落ちてしまった！,You fell in a trap!
+ｳｯ! ﾄﾞｱｰ ﾆ ﾌﾞﾂｹﾀ... ｲﾀｲｾﾞ ｸｿｯ!,You ran into the door... Ouch!,うっ！ ドアーにぶつけた... いたいぜ くそっ！,"Oof! You ran into the door... Poop, it hurts!"
+ﾋﾛﾏﾆ ﾓﾄﾞｯﾃﾗﾚﾅｲﾃﾞｼｮｳ?,Back to the castle?,広間に戻ってられないでしょう？,Can't you go back to the great hall [of the castle]?
 ｵｵｻﾏﾊ ｲｯﾀ:｢ﾖｸﾔｯﾀ!! ﾑｽﾒｦ ﾖﾒﾆﾓﾗｯﾃ ﾎｼｲ!!｣,,,
 ｵｵｻﾏ ﾊ ｲｲﾏｼﾀ:｢ﾏﾀﾞ ｻﾝｿﾞｸﾊ ｲﾙ｡ ﾄｯﾄ ﾄ ｳｾﾛ ! ﾊﾞｶﾓﾉﾒ !｣,,,
 ｱﾅﾀﾊ ﾄﾞｳｸﾂｦ ﾄｳﾘﾇｹ ｿﾄﾆ ｽﾍﾞﾘｵﾁﾏｼﾀ｡,,,
