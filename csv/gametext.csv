@@ -2,7 +2,7 @@ Screen width...4)0 or 8)0 ?,,,
 LOAD OK!,,,
 "         Now , Initializing ...         ",,,
 N)ew game or L)oad data ?,,,
-ｱﾅﾀ(No.1)ﾄ ﾄﾓﾆ 4ﾆﾝﾉ ﾄﾓｶﾞ ｲｯｼｮﾆ ｷﾃ ｸﾚﾏｽ｡,,あなた(No.1)と共に4人が一緒に来てくれます。,You (No. 1) are accompanied by 4 companions.
+ｱﾅﾀ(No.1)ﾄ ﾄﾓﾆ 4ﾆﾝﾉ ﾄﾓｶﾞ ｲｯｼｮﾆ ｷﾃ ｸﾚﾏｽ｡,You(No.1) travel with four companions.,あなた(No.1)と共に4人が一緒に来てくれます。,You (No. 1) are accompanied by 4 companions.
 No.,,,
 Commands :,,,
  E)nter       O)ut         L)ook,,,
@@ -12,7 +12,7 @@ Commands :,,,
  I)nventory   Q)uit        X)=Condition,,,
  Move ...... Ten key,,,
     North=8 South=2 East=6 West=4,,,
- ** ｺﾓｼﾞ ﾃﾞ ﾆｭｳﾘｮｸ **,, ** 小文字で入力 **, ** Input in lower case characters **
+ ** ｺﾓｼﾞ ﾃﾞ ﾆｭｳﾘｮｸ **, * Lower case input *, ** 小文字で入力 **, ** Input in lower case characters **
 Are you ready ?,,,
 OK !! Let's start !   GOOD LUCK !!,,,
 "ｱﾅﾀﾊ ｲﾏ""MN""ﾆﾝﾉﾄﾓﾄ ｺﾉｸﾆﾉ ｵｵｻﾏﾄ ﾌﾟﾘﾝｾｽﾉ ﾏｴﾆ ﾋｻﾞﾏｽﾞｲﾃｲﾏｽ｡",,"あなたは今""MN""人の共とこの国のおお様とプリンセスの前に膝まずいています。","Along with your ""MN"" companions, you are now kneeling before the king and princess of this land."
@@ -222,4 +222,3 @@ f･1 ｦｵｼ Tapeｦｽﾀｰﾄ,,,
 hit any key!,,,
  ,,,
  ,,,
-,,,
