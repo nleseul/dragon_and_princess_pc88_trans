@@ -105,7 +105,7 @@ if __name__ == '__main__':
             if c is None or len(c) == 0:
                 break
             elif parse_state == InstructionsParseState.OUTSIDE_QUOTES:
-                if c == b'\x91':
+                if c == b'\x91' or c == b'\x3b':
                     parse_state = InstructionsParseState.OPENING_QUOTE
             elif parse_state == InstructionsParseState.OPENING_QUOTE:
                 if c == b'\x22':

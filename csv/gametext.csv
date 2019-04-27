@@ -4,6 +4,7 @@ LOAD OK!,,,
 N)ew game or L)oad data ?,,,
 ｱﾅﾀ(No.1)ﾄ ﾄﾓﾆ 4ﾆﾝﾉ ﾄﾓｶﾞ ｲｯｼｮﾆ ｷﾃ ｸﾚﾏｽ｡,You(No.1) travel with four companions.,あなた(No.1)と共に4人が一緒に来てくれます。,You (No. 1) are accompanied by 4 companions.
 No.,,,
+ｻﾝ ﾉ ｵﾅﾏｴ ﾊ,is named...,さんお名前は,s name
 Commands :,,,
  E)nter       O)ut         L)ook,,,
  S)earch      H)urry       R)ead,,,
@@ -15,22 +16,20 @@ Commands :,,,
  ** ｺﾓｼﾞ ﾃﾞ ﾆｭｳﾘｮｸ **, * Lower case input *, ** 小文字で入力 **, ** Input in lower case characters **
 Are you ready ?,,,
 OK !! Let's start !   GOOD LUCK !!,,,
-"ｱﾅﾀﾊ ｲﾏ""MN""ﾆﾝﾉﾄﾓﾄ ｺﾉｸﾆﾉ ｵｵｻﾏﾄ ﾌﾟﾘﾝｾｽﾉ ﾏｴﾆ ﾋｻﾞﾏｽﾞｲﾃｲﾏｽ｡",,"あなたは今""MN""人の共とこの国のおお様とプリンセスの前に膝まずいています。","Along with your ""MN"" companions, you are now kneeling before the king and princess of this land."
-ｵｵｻﾏﾊ ｱﾅﾀﾆ ﾂｷﾞﾉﾖｳﾆ ﾒｲｼﾞﾏｼﾀ｡,,王様はあなたに次のように命じました。,The king commands you as follows.
-｢ｺﾉｸﾆﾆ ｻｲｷﾝ ｱﾗﾜﾚﾙ ﾖｳﾆ ﾅｯﾀ ｻﾝｿﾞｸﾄﾞﾓﾆ ﾀｸｻﾝﾉ ﾀｶﾗ ｦ ｳﾊﾞﾜﾚﾃ ｼﾏｯﾀ｡ ｷﾝｶ 3000 K ﾌﾞﾝﾉ ﾀｶﾗｦ ﾄﾘｶｴｼ ｻﾝｿﾞｸﾀﾁｦ ﾀｲｼﾞｼﾃｺｲ !! ﾔﾙﾍﾞｷ ｺﾄｦ ﾔｯﾀﾄ ｵﾓｯﾀﾗ ｺｺﾆ ﾓﾄﾞｯﾃｺｲ｡ ﾖｲﾅ !｣,,「この国に最近現れるようになった山賊共にたくさんの宝を奪われた。金貨3000K分の宝を取り返し 山賊達を退治して来い！！ やるべきことをやったと思ったらここに戻って来い。良いな！」,"「Much treasure has been stolen by the bandits who have appeared in this land. Recover treasure worth 3000K pieces of gold, and exterminate the bandits! When you think you have done what I have asked, return here. That is all!」"
-ﾐﾁ ﾆ ﾏﾖｯﾀ !!!,,道に迷った！！！,You've lost your way!!!
-"ｱﾅﾀ ﾊ ｲﾏ ""PL$(PL)"" ﾆ ｲﾏｽ｡",,"あなたは今""PL$(PL)""にいます。","You are now at ""PL$(PL)""."
-ﾉ ﾎｳｺｳﾆ ｲｹｿｳﾃﾞｽ,,"ﾉ ﾎｳｺｳﾆ ｲｹｿｳﾃﾞｽ
-の方向に行けそうです",seem to be the directions you can go.
-ﾐﾝﾅ ﾀﾞﾒｰｼﾞｦ ｳｹﾀ !!,,"ﾐﾝﾅ ﾀﾞﾒｰｼﾞｦ ｳｹﾀ !!
-皆 ダメージを受けた！！",Everyone receives damage!!
+"ｱﾅﾀﾊ ｲﾏ""MN""ﾆﾝﾉﾄﾓﾄ ｺﾉｸﾆﾉ ｵｵｻﾏﾄ ﾌﾟﾘﾝｾｽﾉ ﾏｴﾆ ﾋｻﾞﾏｽﾞｲﾃｲﾏｽ｡","You & ""MN"" friends kneel before the king and princess.","あなたは今""MN""人の共とこの国のおお様とプリンセスの前に膝まずいています。","Along with your ""MN"" companions, you are now kneeling before the king and princess of this land."
+ｵｵｻﾏﾊ ｱﾅﾀﾆ ﾂｷﾞﾉﾖｳﾆ ﾒｲｼﾞﾏｼﾀ｡,The king commands you thus:,王様はあなたに次のように命じました。,The king commands you as follows.
+｢ｺﾉｸﾆﾆ ｻｲｷﾝ ｱﾗﾜﾚﾙ ﾖｳﾆ ﾅｯﾀ ｻﾝｿﾞｸﾄﾞﾓﾆ ﾀｸｻﾝﾉ ﾀｶﾗ ｦ ｳﾊﾞﾜﾚﾃ ｼﾏｯﾀ｡ ｷﾝｶ 3000 K ﾌﾞﾝﾉ ﾀｶﾗｦ ﾄﾘｶｴｼ ｻﾝｿﾞｸﾀﾁｦ ﾀｲｼﾞｼﾃｺｲ !! ﾔﾙﾍﾞｷ ｺﾄｦ ﾔｯﾀﾄ ｵﾓｯﾀﾗ ｺｺﾆ ﾓﾄﾞｯﾃｺｲ｡ ﾖｲﾅ !｣,"｢Bandits have appeared recently, and have stolen much of our treasure. Recover 3000K gold, and exterminate them! Return here when you have done so.｣",「この国に最近現れるようになった山賊共にたくさんの宝を奪われた。金貨3000K分の宝を取り返し 山賊達を退治して来い！！ やるべきことをやったと思ったらここに戻って来い。良いな！」,"「Much treasure has been stolen by the bandits who have appeared in this land recently. Recover treasure worth 3000K pieces of gold, and exterminate the bandits! When you think you have done what I have asked, return here. That is all!」"
+ﾐﾁ ﾆ ﾏﾖｯﾀ !!!,You are lost!,道に迷った！！！,You've lost your way!!!
+"ｱﾅﾀ ﾊ ｲﾏ ""PL$(PL)"" ﾆ ｲﾏｽ｡","You are now at ""PL$(PL)"".","あなたは今""PL$(PL)""にいます。","You are now at ""PL$(PL)""."
+ﾉ ﾎｳｺｳﾆ ｲｹｿｳﾃﾞｽ,are valid exits,の方向に行けそうです,seem to be the directions you can go.
+ﾐﾝﾅ ﾀﾞﾒｰｼﾞｦ ｳｹﾀ !!,All are damaged!!,皆 ダメージを受けた！！,Everyone receives damage!!
 "Direction? (Push N=8,S=2,E=6,W=4 End=RET)",,,
 Return,,,
-" ""Y$"" ﾉ ""Y1$"" ﾍﾉ ｺｳｹﾞｷ !!",,"Y$""の""Y1$""への攻撃！！","Y$""'s attack against ""Y1$""!!"
- ｼｶｼ ｼｯﾊﾟｲｼﾀ !,,しかし失敗した！,But it failed!
+" ""Y$"" ﾉ ""Y1$"" ﾍﾉ ｺｳｹﾞｷ !!"," ""Y$""'s attack on ""Y1$""!","Y$""の""Y1$""への攻撃！！","Y$""'s attack against ""Y1$""!!"
+ ｼｶｼ ｼｯﾊﾟｲｼﾀ !, But it fails!,しかし失敗した！,But it failed!
  Hit !! ,,,
-" ""D""ﾉ ﾀﾞﾒｰｼﾞｦ ｱﾀｴﾀ !!",,"D""のダメージを与えた！","It inflicted ""D"" damage!"
-ｱﾅﾀﾊ ｹｯｺﾝｼﾃｲﾙﾉﾃﾞｼｮｳ ?,,あなたは結婚しているのでしょう？,So you're married?
+" ""D""ﾉ ﾀﾞﾒｰｼﾞｦ ｱﾀｴﾀ !!"," ""D"" damage dealt!!","D""のダメージを与えた！","It inflicted ""D"" damage!"
+ｱﾅﾀﾊ ｹｯｺﾝｼﾃｲﾙﾉﾃﾞｼｮｳ ?,So you're married?,あなたは結婚しているのでしょう？,So you're married?
 *,,,
 *,,,
  ,,,
@@ -76,6 +75,7 @@ Ok ,,,
 1)ﾛﾝｸﾞ ｿｰﾄﾞ:100K,,,
 2)ｼｮｰﾄ ｿｰﾄﾞ: 10K,,,
 ﾀﾞﾚｶﾞ ﾓﾁﾏｽｶ( 1 -,,,
+),,,
 ｼｮｸﾘｮｳ 1ｼｮｸﾌﾞﾝ:10K,,,
 1)ﾐﾙｸ  :1K,,,
 2)ﾋﾞｰﾙ :5K,,,
@@ -171,6 +171,7 @@ Drink drink...,,,
 ﾀｶﾗｦ ｴﾀ!!,,,
 ｸｽﾘｦ ﾓｯﾀ ﾑﾗﾉﾑｽﾒｶﾞ ｱﾗﾜﾚﾀ !!,,,
 ｳﾜｰｯ!! ,,,
+ ｶﾞﾜﾅﾆ ｵﾁﾀ!,,,
 ﾅﾆｶ ｱﾗﾜﾚﾀｿﾞ!!,,,
 "ｵﾛｶﾓﾉﾒ,ｺﾉ ﾜﾀｼﾄ ﾀﾀｶｳﾄ ｲｳﾉｶ!",,,
 ｢ﾜｶﾞﾑｽﾒｦ ｴﾖｳﾄﾊ...!!｣,,,
@@ -222,3 +223,5 @@ f･1 ｦｵｼ Tapeｦｽﾀｰﾄ,,,
 hit any key!,,,
  ,,,
  ,,,
+ ,,,
+ ﾆ ｶﾜﾘﾏｽ,,,
