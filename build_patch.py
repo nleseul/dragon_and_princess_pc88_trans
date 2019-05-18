@@ -25,7 +25,8 @@ def import_csv(filename):
             reader = csv.reader(in_file, lineterminator='\n')
 
             for row in reader:
-                lookup[row[0]] = row[1:]
+                if (len(row) > 0):
+                    lookup[row[0]] = row[1:] if len(row) > 1 else []
     except FileNotFoundError:
         pass
 
@@ -103,13 +104,13 @@ if __name__ == '__main__':
             if c is None or len(c) == 0:
                 break
             elif parse_state == InstructionsParseState.OUTSIDE_QUOTES:
-                if c == b'\x91' or c == b'\x3b':
+                if c == b'\x91' or c == b'\x3b' or c == b'\x83':
                     parse_state = InstructionsParseState.OPENING_QUOTE
             elif parse_state == InstructionsParseState.OPENING_QUOTE:
                 if c == b'\x22':
                     parse_state = InstructionsParseState.IN_QUOTES
                     current_range_begin = data.tell()
-                elif c == b'\x20':
+                elif c == b'\x20' or c == b'\x28':
                     pass
                 else:
                     parse_state = InstructionsParseState.OUTSIDE_QUOTES
@@ -117,7 +118,7 @@ if __name__ == '__main__':
                 if c == b'\x22':
                     parse_state = InstructionsParseState.CLOSING_QUOTE
             elif parse_state == InstructionsParseState.CLOSING_QUOTE:
-                if c == b'\x3a' or c == b'\x3b' or c == b'\x00':
+                if c == b'\x3a' or c == b'\x3b' or c == b'\x00' or c == b'\x29' or c == b'\x2c':
                     game_text_bounds.append((current_range_begin, data.tell() - 2))
                     current_range_begin = None
                     parse_state = InstructionsParseState.OUTSIDE_QUOTES

@@ -5,6 +5,7 @@ N)ew game or L)oad data ?,,,,
 ｱﾅﾀ(No.1)ﾄ ﾄﾓﾆ 4ﾆﾝﾉ ﾄﾓｶﾞ ｲｯｼｮﾆ ｷﾃ ｸﾚﾏｽ｡,You(No.1) travel with four companions.,あなた(No.1)と共に4人が一緒に来てくれます。,You (No. 1) are accompanied by 4 companions.,
 No.,,,,
 ｻﾝ ﾉ ｵﾅﾏｴ ﾊ,is named...,さんお名前は,s name,
+ｺﾞﾝﾍﾞｼﾞﾛｻｸﾀﾛｻｸ ﾖｻｸ  ｺﾞｴﾓﾝ
 Commands :,,,,
  E)nter       O)ut         L)ook,,,,
  S)earch      H)urry       R)ead,,,,
@@ -21,10 +22,13 @@ OK !! Let's start !   GOOD LUCK !!,,,,
 ｢ｺﾉｸﾆﾆ ｻｲｷﾝ ｱﾗﾜﾚﾙ ﾖｳﾆ ﾅｯﾀ ｻﾝｿﾞｸﾄﾞﾓﾆ ﾀｸｻﾝﾉ ﾀｶﾗ ｦ ｳﾊﾞﾜﾚﾃ ｼﾏｯﾀ｡ ｷﾝｶ 3000 K ﾌﾞﾝﾉ ﾀｶﾗｦ ﾄﾘｶｴｼ ｻﾝｿﾞｸﾀﾁｦ ﾀｲｼﾞｼﾃｺｲ !! ﾔﾙﾍﾞｷ ｺﾄｦ ﾔｯﾀﾄ ｵﾓｯﾀﾗ ｺｺﾆ ﾓﾄﾞｯﾃｺｲ｡ ﾖｲﾅ !｣,"｢Bandits have appeared recently, and have stolen much of our treasure. Recover 3000K gold, and exterminate them! Return here when you have done so.｣",「この国に最近現れるようになった山賊共にたくさんの宝を奪われた。金貨3000K分の宝を取り返し 山賊達を退治して来い！！ やるべきことをやったと思ったらここに戻って来い。良いな！」,"「Much treasure has been stolen by the bandits who have appeared in this land recently. Recover treasure worth 3000K pieces of gold, and exterminate the bandits! When you think you have done what I have asked, return here. That is all!」",
 ﾐﾁ ﾆ ﾏﾖｯﾀ !!!,You are lost!,道に迷った！！！,You've lost your way!!!,
 "ｱﾅﾀ ﾊ ｲﾏ ""PL$(PL)"" ﾆ ｲﾏｽ｡","You are now at ""PL$(PL)"".","あなたは今""PL$(PL)""にいます。","You are now at ""PL$(PL)"".",
+ｿﾚ ﾊ ｲｲ ｶﾝｶﾞｴﾀﾞ !ﾄﾞｳﾔｯﾃ ｿﾚ ｦ ｽﾙﾉ ?ﾔｯﾃ ﾐｾﾃ ｸﾚﾖ      ｼﾞｮｳﾀﾞﾝ ｶﾞ ｳﾏｲﾈ  ｲﾏ ﾊ ﾃﾞｷﾏｾﾝ !    
+NSEW
 ﾉ ﾎｳｺｳﾆ ｲｹｿｳﾃﾞｽ,are valid exits,の方向に行けそうです,seem to be the directions you can go.,
 ﾐﾝﾅ ﾀﾞﾒｰｼﾞｦ ｳｹﾀ !!,All are damaged!!,皆 ダメージを受けた！！,Everyone receives damage!!,
 "Direction? (Push N=8,S=2,E=6,W=4 End=RET)",,,,
 Return,,,,
+ENWS
 " ""Y$"" ﾉ ""Y1$"" ﾍﾉ ｺｳｹﾞｷ !!"," ""Y$""'s attack on ""Y1$""!","Y$""の""Y1$""への攻撃！！","Y$""'s attack against ""Y1$""!!",
  ｼｶｼ ｼｯﾊﾟｲｼﾀ !, But it fails!,しかし失敗した！,But it failed!,
  Hit !! ,,,,
@@ -36,6 +40,8 @@ Return,,,,
  ,,,,
   ,,,,
 Command ? ,,,,
+ﾍｯ ?ﾅﾆ ?
+North South East  West  Enter Out   Look  SearchHurry AttackBuy   Get   ChangeRead  Inv.  Cond. Quit  
 ﾀｲﾍﾝﾀﾞ !! ｼｮｸﾘｮｳｶﾞ ｿｺｦ ﾂｲﾀ !!,Oh no!! You're out of food!!,大変だ！！ 食糧が底をついた！！,Oh no!! You're out of food!!,
 ﾑｽﾒﾊ ｷｴﾀ..,She left..,娘は消えた..,The girl disappears..,
 ｱﾅﾀﾊ ﾜﾅﾆｵﾁﾃｲﾏｽ,You're trapped,あなたは罠に落ちています,You've fallen in a trap,
@@ -51,13 +57,19 @@ Ok ,,,,
 ｵｵｻﾏ ﾊ ｲｲﾏｼﾀ:｢ﾏﾀﾞ ｻﾝｿﾞｸﾊ ｲﾙ｡ ﾄｯﾄ ﾄ ｳｾﾛ ! ﾊﾞｶﾓﾉﾒ !｣,The king says ｢There are still bandits. Get out of my sight! Fool!｣,,"The king says ""There are still bandits. Get out of my sight! Fool!""",
 ｱﾅﾀﾊ ﾄﾞｳｸﾂｦ ﾄｳﾘﾇｹ ｿﾄﾆ ｽﾍﾞﾘｵﾁﾏｼﾀ｡,You went through the cave.,,You went through the cave.,You went through the cave and exited on the other side.
 ﾓﾝｦ ｸｸﾞﾘ ﾏﾁﾆ ﾊｲﾘﾏﾝﾀ｡,You entered the city.,,You entered the city.,You entered the city throught the (main) gate.
+ｲｯﾀｲ ﾄﾞｺﾆ ﾊｲﾙﾉ ?      ｿﾝﾅ ﾄｺﾆ ﾊｲﾙﾉﾊ ﾁｮｯﾄ...
 ｢ｲｯﾃ ﾗｯｼｬｲ ﾏｾ !｣,｢Take care!｣,,"""Take care!""",
 ﾓﾝｦ ｸｸﾞｯﾃ ﾏﾁﾉ ｿﾄﾍ ﾃﾞﾏｼﾀ｡,You leave the city through the gates.,,You leave the city through the gates.,
 ｵﾄｺｶﾞ ﾄﾞｱｰﾉｶｹﾞﾆｲﾙ....,Behind the door there is a man…,,Behind the door there is a man…,
 ﾄﾞｺﾍ ﾃﾞﾙﾉ ?,Where are you going?,,Where are you going?,
 ｺﾉﾏﾏ ｲｸﾄ ﾏﾖｲﾏｽﾖ !,"If you continue that way, you'll get lost!",,"If you continue that way, you'll get lost!",
+ｴﾀﾞｶﾞ ｵｵｸﾃ ﾄｵﾚﾏｾﾝｿﾁﾗﾊ ﾓﾘｶﾞ ﾌｶｽｷﾞﾏｽｿﾁﾗﾊ ｸﾗｽｷﾞﾃ...   ｸﾗｲ...ﾄﾃﾓ..ｸﾗｲ...ｺｺﾃﾞ ﾏﾖｳﾉﾊ ﾁｮｯﾄ..
+ｶﾍﾞｦ ｺﾜｻﾅｲﾄ ｿﾁﾗﾆﾊ..ｶﾍﾞﾆ ﾌﾞﾂｶﾙﾄ ｲﾀｲﾃﾞｽﾖ
+ｿｳﾅﾝ ｼﾀｲﾉ ? ｳｯ! ｶﾞｹｶﾗ...
+ﾐﾁ ﾅﾝﾃ ﾄﾞｺﾆ ｱﾙﾉ ?ｿﾁﾗﾆﾊ ｲｹﾅｲﾉﾃﾞｽｶﾞ ｺｺﾃﾞ ﾏﾖｳ ﾜｹ ﾆﾊ...ｳｯ! ﾄﾞｺﾆ ｲｷﾀｲﾝﾀﾞ!ﾍｯ ? ﾄﾞｯﾁﾆ ｲｸｯﾃ??ｱﾉﾈ ｿｯﾁﾊﾈ ｲｹﾅｲﾉﾈ 
 ｳｯ... ﾐﾁﾆ ﾏﾖｯﾃ ｼﾏｯﾀ !!!,"Oh, I'm lost!!!",,"Oh, I'm lost!!!",
 ﾔｯﾄ ｼｯﾃﾙ ﾊﾞｼｮﾆ ﾃﾞﾀｿﾞ !!,"Finally, you recognize the landscape!!",,"Finally, you recognize the landscape!!",
+ﾏﾀﾞ ﾐﾁｶﾞ ﾜｶﾗﾅｲ...ｺｺ ﾊ ﾄﾞｺﾅﾝﾀﾞ !!  
 ﾐｽﾞｳﾐ ｦ ｵﾖｲﾃﾞ ﾜﾀﾘﾏｼﾀ｡ ﾐﾝﾅ ｵﾖｷﾞｶﾞ ｼﾞｮｳｽﾞ ﾃﾞｼﾀ !! ...,You skillfully swim across the lake.,,You skillfully swim across the lake.,
 ｸﾞﾙｰﾌﾟ ﾉ ﾓﾁﾓﾉ,The teams belongings,,The teams belongings,
 "  ｼｮｸﾘｮｳ :""CD()""ｼｮｸ ﾌﾞﾝ  /  ｷﾝｶ :""CD(#)""K"," Food: ""CD()""pcs / Gold: ""CD(#)""K",,"Food :""CD(_x0014_) portions / gold pieces :""CD(_x000F_#)""K",
@@ -65,7 +77,9 @@ Ok ,,,,
  ﾅｼ !!, None!!,,None!!,"""There is no…"" ""Nothing."" Or it could mean pear also…"
 ﾌﾞｷ :,Wepn:,,Weapon,
 ﾏﾖｯﾃ ｲﾙﾄｷ ｲｿｸﾞﾄ ﾖｹｲ ﾜｶﾗﾅｸ ﾅﾙﾖ ....,"When you're lost, don't rush - that will make everything worse…",,"When you're lost, don't rush - that will make everything worse…","Lit: When you're lost, don't rush, because you'll get even more lost."
+ｲｿｸﾞﾄ ﾂｶﾚﾁｬｳ !ﾂｶﾚﾙｺﾄﾊ ｷﾗｲﾃﾞｽ
 ｱｰ ﾂｶﾚﾀ! ｲｷｶﾞ ｷﾚﾙﾖ,"Aah, you're very tired. You're panting.",,"Aah, you're very tired. You're panting.",
+ﾅﾆﾓ ｳｯﾃﾏｾﾝｶﾞﾅﾆｦ ｶｳﾝﾃﾞｽｶ?
 "ｱﾅﾀﾊ ﾅﾜﾊﾞｼｺﾞｦ 300Kﾃﾞｶｲ,ｿﾄﾆﾃﾞﾀ",You buy the rope for 300K and leave the pit,,You buy the rope for 300K and leave the pit,You buy the rope ladder for 300K and leave the pit with it
 ｢ｲﾗｯｼｬｲ! ﾂｷﾞﾉﾖｳﾅ ﾓﾉｶﾞ ｱﾘﾏｽｶﾞ ﾅﾆﾆ ｼﾏｼｮｳ?｣,｢Welcome. What would you like to buy?｣,,"""Welcome. What would you like to buy?""",
 ﾄﾞﾚｦ ｶｲﾏｽｶ ? ,What will you buy?,,What will you buy?,
@@ -165,10 +179,12 @@ Drink drink...,,,,
 ﾄﾞﾗｺﾞﾝﾊ ﾔﾏﾆ ｲﾙ｡ｺｺﾉ ｿｰﾄﾞｦ ﾓｯﾃｲｹ!,The dragon lives in the mountains. Take this sword with you!,,The dragon lives in the mountains. Take this sword with you!,
 ﾓｯﾄ ｹｲｹﾝｦ ﾂﾒ!!,You're not experienced enough.,,You're not experienced enough.,You still have to collect more experience.
 ..｣,..｣,,"…""",
+ENWS
 ﾅﾆﾓﾅｲ,Nothing,,Nothing,There is nothing (here)
 ﾃﾞｽｸﾉﾅｶﾆ ﾉｰﾄｶﾞｱﾙ,You find a note in the table,,You find a note in the table,
 ﾅﾆﾓﾅｲ,Nothing,,Nothing,There is nothing (here)
 ﾀｶﾗｦ ｴﾀ!!,You got the treasure!!,,You got the treasure!!,
+ﾄｸﾆ ｱﾘﾏｾﾝ ﾅﾆﾓ ﾅｲﾖｳﾀﾞﾖｲ ﾃﾝｷﾃﾞｽ!
 ｸｽﾘｦ ﾓｯﾀ ﾑﾗﾉﾑｽﾒｶﾞ ｱﾗﾜﾚﾀ !!,The girl with the medicine appeared. ,,The girl with the medicine appeared. ,"""Medicine"" could be ""bribe"" as well. "
 ｳﾜｰｯ!! ,Waa,,Waa,The character is surprised.
  ｶﾞﾜﾅﾆ ｵﾁﾀ!,is trapped.,,is trapped.,"Or: ""is fallen into a trap"""
@@ -196,7 +212,6 @@ Ok !,,,,
 ﾌｯ ﾌｯ ﾌｯ....,,,,
 Hit any key,,,,
 > Move : ,,,,
-
 Again !  ,,,,
 ｲｹﾏｾﾝ !  ,Can't do!,,Can't do!,"Could mean ""It's hopeless."" ""It's not allowed"" ""Must not do"""
 > Cond. : ｾﾞﾝｲﾝ ﾉ Cond.ｦ ﾐﾏｽｶ (y or n),,,,
