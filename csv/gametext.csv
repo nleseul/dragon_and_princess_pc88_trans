@@ -76,6 +76,10 @@ Ok ,,,,
   ﾀｶﾗ :, Treas: ,,Treasure: ,
  ﾅｼ !!, None!!,,None!!,"""There is no…"" ""Nothing."" Or it could mean pear also…"
 ﾌﾞｷ :,Wepn:,,Weapon,
+"ﾛﾝｸﾞ ｿｰﾄﾞ"""
+"ｼｮｰﾄ ｿｰﾄﾞ"""
+"ﾏｼﾞｯｸ ｿｰﾄﾞ"""
+ｼﾞﾌﾞﾝ ﾉ ｳﾃﾞ !!
 ﾏﾖｯﾃ ｲﾙﾄｷ ｲｿｸﾞﾄ ﾖｹｲ ﾜｶﾗﾅｸ ﾅﾙﾖ ....,"When you're lost, don't rush - that will make everything worse…",,"When you're lost, don't rush - that will make everything worse…","Lit: When you're lost, don't rush, because you'll get even more lost."
 ｲｿｸﾞﾄ ﾂｶﾚﾁｬｳ !ﾂｶﾚﾙｺﾄﾊ ｷﾗｲﾃﾞｽ,Stay together!Save energy!  ,急ぐと敷かれちゃう！・疲れることは嫌いです,"If you rush, you'll get separated! / Being tired is unpleasant.",
 ｱｰ ﾂｶﾚﾀ! ｲｷｶﾞ ｷﾚﾙﾖ,"Aah, you're very tired. You're panting.",,"Aah, you're very tired. You're panting.",
@@ -97,6 +101,7 @@ Ok ,,,,
 ｢ﾐﾙｸﾀﾞｯﾃﾖ ｲﾋﾋﾋﾋﾋ....｣,"｢He said milk, hihihi…｣",,"""He said milk, hihihi…""",
 Drink drink...,,,,
 ｲﾏﾉ ﾊｲﾁ:,The current situation:,,The current situation:,"Could be arrangement, configuration, layout."
+"ﾀﾞﾚﾓｲﾅｲ"""
 "ｿｺﾊ ""NM$(PO(L))""ｻﾝｶﾞｲﾏｽ","""NM$(PO(L))"" is there.",,"That is Mr. ""NM$(PO(L))""",
 ｺｺﾊ ﾄﾞｺﾀﾞｶﾜｶﾗﾅｲ...,I don't know where we are…,,I don't know where we are…,
 ﾄｸﾆ ﾅﾆﾓ ﾐｱﾀﾘﾏｾﾝ,You don't find anything interesting,,You don't find anything interesting,
@@ -231,10 +236,20 @@ Again !,,,,
 "ﾄﾞﾗｺﾞﾝｶﾞ ﾋｦ ""NM$(M)""ﾆ ﾊｲﾀ!!","Dragon's fire on ""NM$(M)""!",,"The dragon blows fire on ""NM$(M)""",
 "Save data,YES='y'",,,,
 Tapeｦ ｽﾀｰﾄｼ 'f･1' ｦｵｽ,"Starting the tape, press F1",,"Starting the tape, press F1",
+"Save OK"""
+Game end(y or n)
 f･1 ｦｵｼ Tapeｦｽﾀｰﾄ,"Press F1, start the tape",,"Press F1, start the tape",
+"Load OK"""
+"ﾏｼﾞｮﾆ ﾐｲﾗﾚﾀ.."""
+ﾀﾍﾞﾓﾉｶﾞﾅｸ ｳｺﾞｹﾅｲ..
+"ｹﾝﾄｳﾓﾑﾅｼｸ ｱﾅﾀﾊ ｼﾆﾏｼﾀ !!"""
+"ｱﾅﾀﾊ ｹｯｺﾝﾃﾞｷﾅｶｯﾀ !"""
+ﾕｳｶﾝﾅ ﾌﾟﾘﾝｽﾆ ｶﾝﾊﾟｲ !!
 >>> CONGRATULATION <<<,,,,
 ﾋｰﾛｰﾆ ｶﾝﾊﾟｲ !!,Everyone cheers the hero!!,,Everyone cheers the hero!!,
 >>>>> GAME OVER <<<<<,,,,
+"ｵﾒﾃﾞﾄｳ! ｱﾅﾀﾊ ｺﾉｹﾞｰﾑﾉﾓｸﾃｷｦ ｶﾝｾﾞﾝﾆ ﾊﾀｼﾏｼﾀ"""
+ﾏﾀﾞ ｶﾝｾﾞﾝﾆ ﾓｸﾃｷｦ ﾊﾀｼﾃｲﾏｾﾝ
 ﾖﾘ ﾀｶｲ ﾄｸﾃﾝｦ ﾒｻﾞｼ ﾌﾀﾀﾋﾞ ﾁｬﾚﾝｼﾞ ｼﾃｸﾀﾞｻｲ,"If you want higher score, start the game again",,"If you want higher score, start the game again",
 hit any key!,,,,
  ,,,,

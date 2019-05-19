@@ -104,7 +104,7 @@ if __name__ == '__main__':
             if c is None or len(c) == 0:
                 break
             elif parse_state == InstructionsParseState.OUTSIDE_QUOTES:
-                if c == b'\x91' or c == b'\x3b' or c == b'\x83':
+                if c == b'\x91' or c == b'\x3b' or c == b'\x83' or c == b'\xe7':
                     parse_state = InstructionsParseState.OPENING_QUOTE
             elif parse_state == InstructionsParseState.OPENING_QUOTE:
                 if c == b'\x22':
@@ -122,6 +122,8 @@ if __name__ == '__main__':
                     game_text_bounds.append((current_range_begin, data.tell() - 2))
                     current_range_begin = None
                     parse_state = InstructionsParseState.OUTSIDE_QUOTES
+                elif c == b'\x20':
+                    pass
                 else:
                     parse_state = InstructionsParseState.IN_QUOTES
             else:
