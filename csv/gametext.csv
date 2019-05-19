@@ -5,7 +5,7 @@ N)ew game or L)oad data ?,,,,
 ｱﾅﾀ(No.1)ﾄ ﾄﾓﾆ 4ﾆﾝﾉ ﾄﾓｶﾞ ｲｯｼｮﾆ ｷﾃ ｸﾚﾏｽ｡,You(No.1) travel with four companions.,あなた(No.1)と共に4人が一緒に来てくれます。,You (No. 1) are accompanied by 4 companions.,
 No.,,,,
 ｻﾝ ﾉ ｵﾅﾏｴ ﾊ,is named...,さんお名前は,s name,
-ｺﾞﾝﾍﾞｼﾞﾛｻｸﾀﾛｻｸ ﾖｻｸ  ｺﾞｴﾓﾝ
+ｺﾞﾝﾍﾞｼﾞﾛｻｸﾀﾛｻｸ ﾖｻｸ  ｺﾞｴﾓﾝ,GombeJirosTarosYos  Goemo,ゴンベ・ジロサク・タロサク・ヨサク・ゴエモン,"Gombe, Jirosaku, Tarosaku, Yosaku, Goemon",Default names of the characters.
 Commands :,,,,
  E)nter       O)ut         L)ook,,,,
  S)earch      H)urry       R)ead,,,,
@@ -22,13 +22,13 @@ OK !! Let's start !   GOOD LUCK !!,,,,
 ｢ｺﾉｸﾆﾆ ｻｲｷﾝ ｱﾗﾜﾚﾙ ﾖｳﾆ ﾅｯﾀ ｻﾝｿﾞｸﾄﾞﾓﾆ ﾀｸｻﾝﾉ ﾀｶﾗ ｦ ｳﾊﾞﾜﾚﾃ ｼﾏｯﾀ｡ ｷﾝｶ 3000 K ﾌﾞﾝﾉ ﾀｶﾗｦ ﾄﾘｶｴｼ ｻﾝｿﾞｸﾀﾁｦ ﾀｲｼﾞｼﾃｺｲ !! ﾔﾙﾍﾞｷ ｺﾄｦ ﾔｯﾀﾄ ｵﾓｯﾀﾗ ｺｺﾆ ﾓﾄﾞｯﾃｺｲ｡ ﾖｲﾅ !｣,"｢Bandits have appeared recently, and have stolen much of our treasure. Recover 3000K gold, and exterminate them! Return here when you have done so.｣",「この国に最近現れるようになった山賊共にたくさんの宝を奪われた。金貨3000K分の宝を取り返し 山賊達を退治して来い！！ やるべきことをやったと思ったらここに戻って来い。良いな！」,"「Much treasure has been stolen by the bandits who have appeared in this land recently. Recover treasure worth 3000K pieces of gold, and exterminate the bandits! When you think you have done what I have asked, return here. That is all!」",
 ﾐﾁ ﾆ ﾏﾖｯﾀ !!!,You are lost!,道に迷った！！！,You've lost your way!!!,
 "ｱﾅﾀ ﾊ ｲﾏ ""PL$(PL)"" ﾆ ｲﾏｽ｡","You are now at ""PL$(PL)"".","あなたは今""PL$(PL)""にいます。","You are now at ""PL$(PL)"".",
-ｿﾚ ﾊ ｲｲ ｶﾝｶﾞｴﾀﾞ !ﾄﾞｳﾔｯﾃ ｿﾚ ｦ ｽﾙﾉ ?ﾔｯﾃ ﾐｾﾃ ｸﾚﾖ      ｼﾞｮｳﾀﾞﾝ ｶﾞ ｳﾏｲﾈ  ｲﾏ ﾊ ﾃﾞｷﾏｾﾝ !    
-NSEW
+ｿﾚ ﾊ ｲｲ ｶﾝｶﾞｴﾀﾞ !ﾄﾞｳﾔｯﾃ ｿﾚ ｦ ｽﾙﾉ ?ﾔｯﾃ ﾐｾﾃ ｸﾚﾖ      ｼﾞｮｳﾀﾞﾝ ｶﾞ ｳﾏｲﾈ  ｲﾏ ﾊ ﾃﾞｷﾏｾﾝ !    ,Interesting idea!But how?         Give it a try!   Good joke!       Can't leave now! ,それはいい考えだ！・どうやって　それをするの？・やってみせてくれよ・冗談が美味いね・今は退きません！,That's a good thought! / How will you do that? / Give it a try! / Good joke! / You can't exit now!,
+NSEW,,,,
 ﾉ ﾎｳｺｳﾆ ｲｹｿｳﾃﾞｽ,are valid exits,の方向に行けそうです,seem to be the directions you can go.,
 ﾐﾝﾅ ﾀﾞﾒｰｼﾞｦ ｳｹﾀ !!,All are damaged!!,皆 ダメージを受けた！！,Everyone receives damage!!,
 "Direction? (Push N=8,S=2,E=6,W=4 End=RET)",,,,
 Return,,,,
-ENWS
+ENWS,,,,
 " ""Y$"" ﾉ ""Y1$"" ﾍﾉ ｺｳｹﾞｷ !!"," ""Y$""'s attack on ""Y1$""!","Y$""の""Y1$""への攻撃！！","Y$""'s attack against ""Y1$""!!",
  ｼｶｼ ｼｯﾊﾟｲｼﾀ !, But it fails!,しかし失敗した！,But it failed!,
  Hit !! ,,,,
@@ -40,8 +40,8 @@ ENWS
  ,,,,
   ,,,,
 Command ? ,,,,
-ﾍｯ ?ﾅﾆ ?
-North South East  West  Enter Out   Look  SearchHurry AttackBuy   Get   ChangeRead  Inv.  Cond. Quit  
+ﾍｯ ?ﾅﾆ ?,...What?,へっ？なに？,Eh? What?,
+North South East  West  Enter Out   Look  SearchHurry AttackBuy   Get   ChangeRead  Inv.  Cond. Quit  ,,,,
 ﾀｲﾍﾝﾀﾞ !! ｼｮｸﾘｮｳｶﾞ ｿｺｦ ﾂｲﾀ !!,Oh no!! You're out of food!!,大変だ！！ 食糧が底をついた！！,Oh no!! You're out of food!!,
 ﾑｽﾒﾊ ｷｴﾀ..,She left..,娘は消えた..,The girl disappears..,
 ｱﾅﾀﾊ ﾜﾅﾆｵﾁﾃｲﾏｽ,You're trapped,あなたは罠に落ちています,You've fallen in a trap,
@@ -57,19 +57,19 @@ Ok ,,,,
 ｵｵｻﾏ ﾊ ｲｲﾏｼﾀ:｢ﾏﾀﾞ ｻﾝｿﾞｸﾊ ｲﾙ｡ ﾄｯﾄ ﾄ ｳｾﾛ ! ﾊﾞｶﾓﾉﾒ !｣,The king says ｢There are still bandits. Get out of my sight! Fool!｣,,"The king says ""There are still bandits. Get out of my sight! Fool!""",
 ｱﾅﾀﾊ ﾄﾞｳｸﾂｦ ﾄｳﾘﾇｹ ｿﾄﾆ ｽﾍﾞﾘｵﾁﾏｼﾀ｡,You went through the cave.,,You went through the cave.,You went through the cave and exited on the other side.
 ﾓﾝｦ ｸｸﾞﾘ ﾏﾁﾆ ﾊｲﾘﾏﾝﾀ｡,You entered the city.,,You entered the city.,You entered the city throught the (main) gate.
-ｲｯﾀｲ ﾄﾞｺﾆ ﾊｲﾙﾉ ?      ｿﾝﾅ ﾄｺﾆ ﾊｲﾙﾉﾊ ﾁｮｯﾄ...
+ｲｯﾀｲ ﾄﾞｺﾆ ﾊｲﾙﾉ ?      ｿﾝﾅ ﾄｺﾆ ﾊｲﾙﾉﾊ ﾁｮｯﾄ...,What would you enter? Enter now? Okay...   ,一体どこに入るの？・そんなとこに入るのはちょっと…,What in the world do you enter? / Entering somewhere like this is a bit...,
 ｢ｲｯﾃ ﾗｯｼｬｲ ﾏｾ !｣,｢Take care!｣,,"""Take care!""",
 ﾓﾝｦ ｸｸﾞｯﾃ ﾏﾁﾉ ｿﾄﾍ ﾃﾞﾏｼﾀ｡,You leave the city through the gates.,,You leave the city through the gates.,
 ｵﾄｺｶﾞ ﾄﾞｱｰﾉｶｹﾞﾆｲﾙ....,Behind the door there is a man…,,Behind the door there is a man…,
 ﾄﾞｺﾍ ﾃﾞﾙﾉ ?,Where are you going?,,Where are you going?,
 ｺﾉﾏﾏ ｲｸﾄ ﾏﾖｲﾏｽﾖ !,"If you continue that way, you'll get lost!",,"If you continue that way, you'll get lost!",
-ｴﾀﾞｶﾞ ｵｵｸﾃ ﾄｵﾚﾏｾﾝｿﾁﾗﾊ ﾓﾘｶﾞ ﾌｶｽｷﾞﾏｽｿﾁﾗﾊ ｸﾗｽｷﾞﾃ...   ｸﾗｲ...ﾄﾃﾓ..ｸﾗｲ...ｺｺﾃﾞ ﾏﾖｳﾉﾊ ﾁｮｯﾄ..
-ｶﾍﾞｦ ｺﾜｻﾅｲﾄ ｿﾁﾗﾆﾊ..ｶﾍﾞﾆ ﾌﾞﾂｶﾙﾄ ｲﾀｲﾃﾞｽﾖ
-ｿｳﾅﾝ ｼﾀｲﾉ ? ｳｯ! ｶﾞｹｶﾗ...
-ﾐﾁ ﾅﾝﾃ ﾄﾞｺﾆ ｱﾙﾉ ?ｿﾁﾗﾆﾊ ｲｹﾅｲﾉﾃﾞｽｶﾞ ｺｺﾃﾞ ﾏﾖｳ ﾜｹ ﾆﾊ...ｳｯ! ﾄﾞｺﾆ ｲｷﾀｲﾝﾀﾞ!ﾍｯ ? ﾄﾞｯﾁﾆ ｲｸｯﾃ??ｱﾉﾈ ｿｯﾁﾊﾈ ｲｹﾅｲﾉﾈ 
+ｴﾀﾞｶﾞ ｵｵｸﾃ ﾄｵﾚﾏｾﾝｿﾁﾗﾊ ﾓﾘｶﾞ ﾌｶｽｷﾞﾏｽｿﾁﾗﾊ ｸﾗｽｷﾞﾃ...   ｸﾗｲ...ﾄﾃﾓ..ｸﾗｲ...ｺｺﾃﾞ ﾏﾖｳﾉﾊ ﾁｮｯﾄ..,Too many branchesForest too thick Too dark that wayDark...so dark...Lost here...?    ,枝が多くて通れません・そちらは森が深すぎます・そちらは暗すぎて…・暗い…とても…暗い・ここで迷うのはちょっと…,"There are lots of branches, and you can't pass through. / The forest is too thick that way. / It's too dark that way. / Dark... so dark... / Getting lost here is a bit...",
+ｶﾍﾞｦ ｺﾜｻﾅｲﾄ ｿﾁﾗﾆﾊ..ｶﾍﾞﾆ ﾌﾞﾂｶﾙﾄ ｲﾀｲﾃﾞｽﾖ,You collide with the solid wall. Ouch!,壁を壊さないとそちらには…壁に打つかるといたいですよ,"You can't break through the wall that way, so you collide with it, and it hurts!",
+ｿｳﾅﾝ ｼﾀｲﾉ ? ｳｯ! ｶﾞｹｶﾗ...,"Dangerous!  Um, cliff...",遭難したいの？・うっ！崖から…,Do you want to wreck the ship? / Whoa! There are cliffs...,
+ﾐﾁ ﾅﾝﾃ ﾄﾞｺﾆ ｱﾙﾉ ?ｿﾁﾗﾆﾊ ｲｹﾅｲﾉﾃﾞｽｶﾞ ｺｺﾃﾞ ﾏﾖｳ ﾜｹ ﾆﾊ...ｳｯ! ﾄﾞｺﾆ ｲｷﾀｲﾝﾀﾞ!ﾍｯ ? ﾄﾞｯﾁﾆ ｲｸｯﾃ??ｱﾉﾈ ｿｯﾁﾊﾈ ｲｹﾅｲﾉﾈ ,Is there a road?Can't go there. You'll get lost!Whoa! Go where? Eh? Go where??  Um... you can't.,道なんてどこにあるの？・そちらには行けないのですが・ここで迷う受けには…・わっ！どこに行きたいんだ！・へっ？どっちに行けって？？・あのねそっちはね行けないのね,"Is there a road or something? / But you can't go that way. / You'll get lost in that direction... / Whoa! Where are you trying to go? / Eh? Go where?? / Um... that way... you can't go there, you know?",
 ｳｯ... ﾐﾁﾆ ﾏﾖｯﾃ ｼﾏｯﾀ !!!,"Oh, I'm lost!!!",,"Oh, I'm lost!!!",
 ﾔｯﾄ ｼｯﾃﾙ ﾊﾞｼｮﾆ ﾃﾞﾀｿﾞ !!,"Finally, you recognize the landscape!!",,"Finally, you recognize the landscape!!",
-ﾏﾀﾞ ﾐﾁｶﾞ ﾜｶﾗﾅｲ...ｺｺ ﾊ ﾄﾞｺﾅﾝﾀﾞ !!  
+ﾏﾀﾞ ﾐﾁｶﾞ ﾜｶﾗﾅｲ...ｺｺ ﾊ ﾄﾞｺﾅﾝﾀﾞ !!  ,Still lost...    Where are we??   ,未だ道が分からない…・ここはどこ何だ！！,You don't know the way yet... / Where are we??,
 ﾐｽﾞｳﾐ ｦ ｵﾖｲﾃﾞ ﾜﾀﾘﾏｼﾀ｡ ﾐﾝﾅ ｵﾖｷﾞｶﾞ ｼﾞｮｳｽﾞ ﾃﾞｼﾀ !! ...,You skillfully swim across the lake.,,You skillfully swim across the lake.,
 ｸﾞﾙｰﾌﾟ ﾉ ﾓﾁﾓﾉ,The teams belongings,,The teams belongings,
 "  ｼｮｸﾘｮｳ :""CD()""ｼｮｸ ﾌﾞﾝ  /  ｷﾝｶ :""CD(#)""K"," Food: ""CD()""pcs / Gold: ""CD(#)""K",,"Food :""CD(_x0014_) portions / gold pieces :""CD(_x000F_#)""K",
@@ -77,9 +77,9 @@ Ok ,,,,
  ﾅｼ !!, None!!,,None!!,"""There is no…"" ""Nothing."" Or it could mean pear also…"
 ﾌﾞｷ :,Wepn:,,Weapon,
 ﾏﾖｯﾃ ｲﾙﾄｷ ｲｿｸﾞﾄ ﾖｹｲ ﾜｶﾗﾅｸ ﾅﾙﾖ ....,"When you're lost, don't rush - that will make everything worse…",,"When you're lost, don't rush - that will make everything worse…","Lit: When you're lost, don't rush, because you'll get even more lost."
-ｲｿｸﾞﾄ ﾂｶﾚﾁｬｳ !ﾂｶﾚﾙｺﾄﾊ ｷﾗｲﾃﾞｽ
+ｲｿｸﾞﾄ ﾂｶﾚﾁｬｳ !ﾂｶﾚﾙｺﾄﾊ ｷﾗｲﾃﾞｽ,Stay together!Save energy!  ,急ぐと敷かれちゃう！・疲れることは嫌いです,"If you rush, you'll get separated! / Being tired is unpleasant.",
 ｱｰ ﾂｶﾚﾀ! ｲｷｶﾞ ｷﾚﾙﾖ,"Aah, you're very tired. You're panting.",,"Aah, you're very tired. You're panting.",
-ﾅﾆﾓ ｳｯﾃﾏｾﾝｶﾞﾅﾆｦ ｶｳﾝﾃﾞｽｶ?
+ﾅﾆﾓ ｳｯﾃﾏｾﾝｶﾞﾅﾆｦ ｶｳﾝﾃﾞｽｶ?,No shops!   Buy what??  ,何も売ってませんが・何を買うんですか？,But there's nothing being sold. / What do you intend to buy?',
 "ｱﾅﾀﾊ ﾅﾜﾊﾞｼｺﾞｦ 300Kﾃﾞｶｲ,ｿﾄﾆﾃﾞﾀ",You buy the rope for 300K and leave the pit,,You buy the rope for 300K and leave the pit,You buy the rope ladder for 300K and leave the pit with it
 ｢ｲﾗｯｼｬｲ! ﾂｷﾞﾉﾖｳﾅ ﾓﾉｶﾞ ｱﾘﾏｽｶﾞ ﾅﾆﾆ ｼﾏｼｮｳ?｣,｢Welcome. What would you like to buy?｣,,"""Welcome. What would you like to buy?""",
 ﾄﾞﾚｦ ｶｲﾏｽｶ ? ,What will you buy?,,What will you buy?,
@@ -106,7 +106,7 @@ Drink drink...,,,,
 "ｺﾉﾍﾔﾊ ﾄﾃﾓﾋﾛｸ,ﾀｸｻﾝﾉ ｷｼﾀﾁｶﾞﾋｶｴﾃｲﾙ",The hall is wide and teeming with knights,,The hall is wide and teeming with knights,
 ﾔﾏﾉﾅｶﾆ ﾋｷｺﾓｯﾀ ｾﾝﾆﾝｶﾞｽﾝﾃﾞｲﾙ,The hermit sailor lives in the mountains,,The hermit sailor lives in the mountains,
 ｶﾍﾞﾆﾊ ﾋｶﾘｶｶﾞﾔｸ ｿｰﾄﾞｶﾞｻｻｯﾃｲﾙ,A sparkling sword is stuck in the wall,,A sparkling sword is stuck in the wall,
-ﾅﾆﾓ ﾅｸﾅｯﾃｼﾏｯﾀ..,,,,
+ﾅﾆﾓ ﾅｸﾅｯﾃｼﾏｯﾀ..,It's empty... ,何もなくなってしまった…,It's all empty...,
 ｳﾂｸｼｲ ﾐｽﾞｳﾐｶﾞﾏﾈｲﾃｲﾙ｡ ﾐﾝﾅﾃﾞｵﾖｺﾞｳ!,The lake is pretty. Everyone wants to swim!,,The lake is pretty. Everyone wants to swim!,
 ｵｵｷﾅ ﾏﾁﾉﾓﾝｶﾞ ﾐｴﾙ,You see the city's big gate,,You see the city's big gate,"It could be ""You see the big city's gate"" as well"
 ｸﾗｲ....,It's dark,,It's dark,
@@ -136,7 +136,7 @@ Drink drink...,,,,
 "ｺｺﾆﾊ ""PL$(H)""ｶﾞｱﾙ","""PL$(H)"" is here.",,"Here is a ""PL$(_x000F_H)",
 "ｺｺﾆﾊ ""PL$(I)""ｶﾞｱﾙ","""PL$(I)"" is here.",,"Here is a ""PL$(_x000F_I)",
 "ｺｺﾆﾊ ""PL$(J)""ｶﾞｱﾙ","""PL$(J)"" is here.",,"Here is a ""PL$(_x000F_J)",
-ﾏﾁﾉ ﾓﾝｶﾞｱﾙ
+ﾏﾁﾉ ﾓﾝｶﾞｱﾙ,Gate here.,町の門がある,The town's gate is here.,
 ﾀｸｻﾝﾉ ﾀﾃﾓﾉｶﾞｱﾙ,There are lots of buildings around,,There are lots of buildings around,
 ﾐﾁｶﾞ ﾊﾙｶｶﾅﾀﾏﾃﾞ ﾉﾋﾞﾃｲﾙﾖｳﾀﾞ,It looks like the road leads very far,,It looks like the road leads very far,
 ﾏﾜﾘﾆﾊ ｺﾀﾞﾁｶﾞｱﾙ,A grove is here,,A grove is here,"It could be ""A small sword is here"""
@@ -179,12 +179,12 @@ Drink drink...,,,,
 ﾄﾞﾗｺﾞﾝﾊ ﾔﾏﾆ ｲﾙ｡ｺｺﾉ ｿｰﾄﾞｦ ﾓｯﾃｲｹ!,The dragon lives in the mountains. Take this sword with you!,,The dragon lives in the mountains. Take this sword with you!,
 ﾓｯﾄ ｹｲｹﾝｦ ﾂﾒ!!,You're not experienced enough.,,You're not experienced enough.,You still have to collect more experience.
 ..｣,..｣,,"…""",
-ENWS
+ENWS,,,,
 ﾅﾆﾓﾅｲ,Nothing,,Nothing,There is nothing (here)
 ﾃﾞｽｸﾉﾅｶﾆ ﾉｰﾄｶﾞｱﾙ,You find a note in the table,,You find a note in the table,
 ﾅﾆﾓﾅｲ,Nothing,,Nothing,There is nothing (here)
 ﾀｶﾗｦ ｴﾀ!!,You got the treasure!!,,You got the treasure!!,
-ﾄｸﾆ ｱﾘﾏｾﾝ ﾅﾆﾓ ﾅｲﾖｳﾀﾞﾖｲ ﾃﾝｷﾃﾞｽ!
+ﾄｸﾆ ｱﾘﾏｾﾝ ﾅﾆﾓ ﾅｲﾖｳﾀﾞﾖｲ ﾃﾝｷﾃﾞｽ!,Not much. Nothing.  Nice day! ,得にありません・何もないようだ・良い天気です！,Not much here. / Doesn't seem to be anything. / It's good weather!,
 ｸｽﾘｦ ﾓｯﾀ ﾑﾗﾉﾑｽﾒｶﾞ ｱﾗﾜﾚﾀ !!,The girl with the medicine appeared. ,,The girl with the medicine appeared. ,"""Medicine"" could be ""bribe"" as well. "
 ｳﾜｰｯ!! ,Waa,,Waa,The character is surprised.
  ｶﾞﾜﾅﾆ ｵﾁﾀ!,is trapped.,,is trapped.,"Or: ""is fallen into a trap"""
@@ -204,12 +204,12 @@ ENWS
 Command : 1)Move 2)Attack 3)Search 4)Cond. 5)Skip ?,,,,
 ﾅﾝﾄｶ ﾀﾞｼｭﾂｼﾀ !,Something appeared!,,Something appeared!,
 ﾀﾞﾒﾀﾞ !!,Not good!!,,Not good!!,"Could mean ""Please don't do that."" or ""I can not do that."" also"
-ﾍｯ ?,He?,,He?,
+ﾍｯ ?,Eh?,,Eh?,
 Again !,,,,
 Ok !,,,,
 ﾃﾝｶﾗ ﾋｶﾘｶﾞｻｼﾀ! ｶﾐﾉｺｴ:｢ﾅﾝｼﾞﾉﾂﾄﾒｦ ﾊﾀｾ..｣,A lightray from the sky appears. God's voice says: ｢Yours is a hard job.｣,,"A lightray from the sky appears. God's voice says: ""Your's is a hard job.""",
 ｺｺｦ ﾃﾞﾏｽｶ(y or n),Are you leaving now? (y or n),,Are you leaving now? (y or n),
-ﾌｯ ﾌｯ ﾌｯ....,,,,
+ﾌｯ ﾌｯ ﾌｯ....,Ha ha ha...,フッ　フッ　フッ…,Ha ha ha...,
 Hit any key,,,,
 > Move : ,,,,
 Again !  ,,,,
