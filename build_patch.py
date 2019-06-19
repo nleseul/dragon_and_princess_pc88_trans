@@ -3,20 +3,6 @@ import csv
 import io
 import os
 import sys
-from enum import Enum, auto
-
-class InstructionsParseState(Enum):
-    OUTSIDE_QUOTES = auto()
-    OPENING_QUOTE = auto()
-    IN_QUOTES = auto()
-    CLOSING_QUOTE = auto()
-
-class DataTableParseState(Enum):
-    NUMERIC_ENTRY = auto()
-    VALID_ENTRY = auto()
-    IN_BINARY = auto()
-    ENDING_BINARY = auto()
-
 
 def import_csv(filename):
     lookup = {}
@@ -25,45 +11,125 @@ def import_csv(filename):
             reader = csv.reader(in_file, lineterminator='\n')
 
             for row in reader:
-                if (len(row) > 0):
-                    lookup[row[0]] = row[1:] if len(row) > 1 else []
+                if (len(row) > 2):
+                    lookup[row[2]] = row[3:] if len(row) > 3 else []
     except FileNotFoundError:
         pass
 
     return lookup
 
-def write_csv(filename, bounds_list, lookup):
-    with open(filename, 'w+', encoding='utf8') as out_file:
-        writer = csv.writer(out_file, lineterminator='\n')
+def unpack_bytecode(data):
+    lines = []
 
-        for bounds in bounds_list:
-            try:
-                text = buf[bounds[0]:bounds[1]].decode('shift_jis')
-                row = [text]
-                if text in lookup:
-                    row += lookup[text]
-                writer.writerow(row)
-            except UnicodeDecodeError:
-                pass
+    while True:
+        link_addr = int.from_bytes(data.read(2), byteorder='little')
+        line_number = int.from_bytes(data.read(2), byteorder='little')
 
-def patch_in_translations(buf, bounds_list, lookup):
-    for bounds in bounds_list:
-        try:
-            original_text = buf[bounds[0]:bounds[1]]
-            decoded_text = original_text.decode('shift_jis')
-            translated_text = lookup[decoded_text][0]
+        tokens = []
 
-            if len(translated_text) > 0:
-                encoded_translated_text = translated_text.encode('shift_jis')
-                if len(encoded_translated_text) > len(original_text):
-                    print("Warning! Text '{0}' is too long for the available space of {1} bytes.".format(translated_text, len(original_text)))
-                    encoded_translated_text = encoded_translated_text[:len(original_text)]
-                encoded_translated_text = encoded_translated_text.ljust(len(original_text), b'\x20')
+        if link_addr == 0:
+            break
 
-                buf[bounds[0]:bounds[1]] = encoded_translated_text
+        while True:
+            c = data.read(1)
 
-        except (UnicodeDecodeError, KeyError, IndexError):
-            pass
+            if len(c) == 0 or c[0] == 0:
+                break
+
+            op = c[0]
+            current_token = {'op': c[0]}
+            force_step_back = False
+
+
+            if op == 0xc or op == 0xe or op == 0x1c: # Hex constant, decimal constant, also decimal constant; 2 bytes
+                current_token['content'] = data.read(2)
+            elif op == 0xf: # One-byte decimal constant
+                current_token['content'] = data.read(1)
+            elif op == 0x1d: # Single precision float
+                current_token['content'] = data.read(4)
+            elif op == 0x22: # Start quote
+                current_token['content'] = bytearray()
+                current_token['terminator'] = op
+                while True:
+                    c = data.read(1)
+                    if len(c) == 0 or c[0] == 0:
+                        force_step_back = True
+                        break
+
+                    if c[0] == 0x22:
+                        break
+                    else:
+                        current_token['content'] += c
+
+
+            elif op == 0x84: # Data
+                content = data.read(1) # Space after DATA is required, I think; store it as content.
+                fields = [bytearray()]
+                while True:
+                    c = data.read(1)
+                    if len(c) == 0 or c[0] == 0:
+                        force_step_back = True
+                        break
+                    elif c[0] == 0x2c: # Comma
+                        fields.append(bytearray())
+                    elif c[0] == 0x3a: # Colon
+                        force_step_back = True
+                        break
+                    else:
+                        fields[-1] += c
+                current_token['fields'] = fields
+            elif op == 0x8f: # Remark
+                current_token['content'] = bytearray()
+                while True:
+                    c = data.read(1)
+                    if len(c) == 0 or c[0] == 0:
+                        force_step_back = True
+                        break
+                    current_token['content'] += c
+
+            tokens.append(current_token)
+
+            if force_step_back:
+                data.seek(data.tell() - 1)
+
+        lines.append({'line_number': line_number, 'orig_addr': link_addr, 'tokens': tokens})
+
+        data.seek(link_addr - 1)
+
+    return lines
+
+def pack_bytecode(lines):
+    output = bytearray()
+    for line in lines:
+        line_data = bytearray()
+        for token in line['tokens']:
+            line_data += bytes([token['op']])
+            if 'content' in token:
+                line_data += token['content']
+            if 'fields' in token:
+                fields_data = bytearray()
+                for field in token['fields']:
+                    if len(fields_data) > 0:
+                        fields_data += b','
+                    fields_data += field
+                line_data += fields_data
+
+            if 'terminator' in token:
+                line_data += bytes([token['terminator']])
+
+        # Current pos + 4 for line/pointer + length of line + 1 for terminator + 1 for weird offset
+        link_addr = len(output) + 4 + len(line_data) + 1 + 1
+
+        output += int.to_bytes(link_addr, 2, byteorder='little')
+        output += int.to_bytes(line['line_number'], 2, byteorder='little')
+        output += line_data
+        output += b'\x00'
+
+    # Terminator
+    output += b'\x00\x00\x00'
+
+    return output
+
 
 if __name__ == '__main__':
 
@@ -82,104 +148,195 @@ if __name__ == '__main__':
     # Read the sectors of the disk that matter to us.
     buf = bytearray()
 
+    track_start_address_list = []
+
+    next_block_table = bytearray()
+    directory_table = bytearray()
+
     with open(args.in_disk_image, 'rb') as in_file:
+        # First, read the table from the D88 header that gives the start
+        # address in the disk image of each track.
+        MAX_TRACKS = 164
+        in_file.seek(0x20)
+        for _ in range(MAX_TRACKS):
+            track_start_address_list.append(int.from_bytes(in_file.read(4), byteorder='little'))
 
-        in_file.seek(0x2a230)
+        # Now, the loader specific to this disk. It seems to organize its files in "blocks"
+        # that appear to be 8 sectors, or half a track, each. It has a table that says what
+        # the next block should be after each block. Values greater than 0xc0 appear to be
+        # terminators; I'm not sure what exactly they mean.
+        in_file.seek(0x800 + 0x10)
+        next_block_table += in_file.read(0x100)
 
-        while in_file.tell() < 0x31600:
+        # Then, the loader's directory table is a sequence of 32-byte records spanning 4 sectors.
+        in_file.seek(0x910)
+        for _ in range(4):
             in_file.seek(0x10, os.SEEK_CUR)
-            buf += in_file.read(0x100)
+            directory_table += in_file.read(0x100)
 
-    parse_state = InstructionsParseState.OUTSIDE_QUOTES
+        # I know that the main Dragon & Princess BASIC code file is entry 11 in this table.
+        # I also know that the last byte in the record (0x1f) is the first block of the file.
+        # And the file size, at least in our case, is a 16-bit value at offset 0x1b.
+        dnp_directory_entry = directory_table[(11 * 0x20):(12 * 0x20)]
+        current_block = dnp_directory_entry[0x1f]
+        file_size = int.from_bytes(dnp_directory_entry[0x1b:0x1d], byteorder='big')
 
-    game_text_bounds = []
-    misc_text_bounds = []
+        # Given that, we can just follow the blocks in the table and grab the whole file.
+        # Again, each block spans 8 sectors.
+        while current_block < 0xc0:
+            track_index = current_block // 2
+            sector_index = (current_block % 2) * 8
+            address = track_start_address_list[track_index] + sector_index * 0x110
 
-    current_range_begin = None
+            in_file.seek(address)
+            for _ in range(8):
+                in_file.seek(0x10, os.SEEK_CUR)
+                buf += in_file.read(0x100)
 
-    # Scan the whole file for quoted text (begins with ‘")
+            current_block = next_block_table[current_block]
+
+        buf = buf[:file_size]
+
+    lines = []
     with io.BytesIO(buf) as data:
-        while True:
-            c = data.read(1)
-            if c is None or len(c) == 0:
-                break
-            elif parse_state == InstructionsParseState.OUTSIDE_QUOTES:
-                if c == b'\x91' or c == b'\x3b' or c == b'\x83' or c == b'\xe7':
-                    parse_state = InstructionsParseState.OPENING_QUOTE
-            elif parse_state == InstructionsParseState.OPENING_QUOTE:
-                if c == b'\x22':
-                    parse_state = InstructionsParseState.IN_QUOTES
-                    current_range_begin = data.tell()
-                elif c == b'\x20' or c == b'\x28':
-                    pass
-                else:
-                    parse_state = InstructionsParseState.OUTSIDE_QUOTES
-            elif parse_state == InstructionsParseState.IN_QUOTES:
-                if c == b'\x22':
-                    parse_state = InstructionsParseState.CLOSING_QUOTE
-            elif parse_state == InstructionsParseState.CLOSING_QUOTE:
-                if c == b'\x3a' or c == b'\x3b' or c == b'\x00' or c == b'\x29' or c == b'\x2c':
-                    game_text_bounds.append((current_range_begin, data.tell() - 2))
-                    current_range_begin = None
-                    parse_state = InstructionsParseState.OUTSIDE_QUOTES
-                elif c == b'\x20':
-                    pass
-                else:
-                    parse_state = InstructionsParseState.IN_QUOTES
-            else:
-                raise Exception("Unknown parse state!")
+        lines = unpack_bytecode(data)
 
-    # Scan the end bits of the file for comma-separated data tables that include text
-    with io.BytesIO(buf) as data:
-        data.seek(0x60d5)
-        parse_state = DataTableParseState.NUMERIC_ENTRY
-        current_range_begin = data.tell()
-
-        while True:
-            c = data.read(1)
-
-            if c is None or len(c) == 0:
-                break
-            elif parse_state == DataTableParseState.NUMERIC_ENTRY:
-                if c == b'\x00':
-                    parse_state = DataTableParseState.IN_BINARY
-                elif c == b'\x2c':
-                    current_range_begin = data.tell()
-                elif not(c[0] >= ord('0') and c[0] <= ord('9')) and c != b'\x2d' and c != b'\x2e':
-                    parse_state = DataTableParseState.VALID_ENTRY
-            elif parse_state == DataTableParseState.VALID_ENTRY:
-                if c == b'\x00' or c == b'\x2c':
-                    misc_text_bounds.append((current_range_begin, data.tell() - 1))
-                    current_range_begin = data.tell()
-                    parse_state = (DataTableParseState.IN_BINARY if c == b'\x00' else DataTableParseState.NUMERIC_ENTRY)
-            elif parse_state == DataTableParseState.IN_BINARY:
-                if c == b'\x84':
-                    parse_state = DataTableParseState.ENDING_BINARY
-            elif parse_state == DataTableParseState.ENDING_BINARY:
-                if c == b'\x20':
-                    parse_state = DataTableParseState.NUMERIC_ENTRY
-                    current_range_begin = data.tell()
-            else:
-                raise Exception("Unknown parse state!")
-
-    # Write out updated CSVs if requested.
+    # Build the CSVs if we need to.
     if args.update_csv:
-        write_csv('csv/gametext.csv', game_text_bounds, game_text_lookup)
-        write_csv('csv/misctext.csv', misc_text_bounds, misc_text_lookup)
+        with open('csv/gametext.csv', 'w+', encoding='utf8') as out_file:
+            writer = csv.writer(out_file, lineterminator='\n')
 
-    # Write translated text into the buffer.
-    patch_in_translations(buf, game_text_bounds, game_text_lookup)
-    patch_in_translations(buf, misc_text_bounds, misc_text_lookup)
+            for line in lines:
+                string_index = 0
+                for token in line['tokens']:
+                    if token['op'] == 0x22:
+                        try:
+                            text = token['content'].decode('shift_jis')
+                            row = [line['line_number'], string_index, text]
 
-    # Dump the whole original disk image into the output file to start with.
-    with open(args.in_disk_image, 'rb') as in_file, open(args.out_disk_image, 'w+b') as out_file:
-        out_file.write(in_file.read())
+                            if text in game_text_lookup:
+                                row += game_text_lookup[text]
+
+                            writer.writerow(row)
+                        except UnicodeDecodeError:
+                            pass
+                        string_index += 1
+
+        with open('csv/misctext.csv', 'w+', encoding='utf8') as out_file:
+            writer = csv.writer(out_file, lineterminator='\n')
+
+            for line in lines:
+                string_index = 0
+                for token in line['tokens']:
+                    if token['op'] == 0x84:
+                        for field in token['fields']:
+                            try:
+                                text = field.decode('shift_jis')
+
+                                # Ugly hack, because Python
+                                is_number = True
+                                try:
+                                    float(text)
+                                except ValueError:
+                                    is_number = False
+
+                                if not is_number:
+                                    row = [line['line_number'], string_index, text]
+
+                                    if text in misc_text_lookup:
+                                        row += misc_text_lookup[text]
+
+                                    writer.writerow(row)
+
+                                    string_index += 1
+                            except UnicodeDecodeError:
+                                string_index += 1
+
+    # Now scan through and patch in translations as needed.
+    for line in lines:
+        for token in line['tokens']:
+            if token['op'] == 0x22:
+                try:
+                    text = token['content'].decode('shift_jis')
+                    if text in game_text_lookup:
+                        row = game_text_lookup[text]
+
+                        if len(row) > 0 and len(row[0]) > 0:
+                            token['content'] = row[0].encode('shift_jis')
+                except UnicodeDecodeError:
+                    pass
+            elif token['op'] == 0x84:
+                for index, field in enumerate(token['fields']):
+                    try:
+                        text = field.decode('shift_jis')
+
+                        # Ugly hack, because Python
+                        is_number = True
+                        try:
+                            float(text)
+                        except ValueError:
+                            is_number = False
+
+                        if not is_number and text in misc_text_lookup:
+                            row = misc_text_lookup[text]
+                            if len(row) > 0 and len(row[0]) > 0:
+                                token['fields'][index] = row[0].encode('shift_jis')
+                    except UnicodeDecodeError:
+                        pass
+
+
+    output = pack_bytecode(lines)
+
+    print('Orig {0}, result {1}'.format(len(buf), len(output)))
+
+    # Surgery on the directory table.
+    # First, patch in the new size of the output bytecode.
+    directory_table[(11 * 0x20) + 0x1b:(11 * 0x20) + 0x1d] = len(output).to_bytes(2, byteorder='big')
+
+    # Amend the name of the file a little.
+    directory_table[(11 * 0x20) + 0x12:(11 * 0x20) + 0x14] = b'EN'
+
+    # Now, there's a game called "Donkey Gorilla" that takes up three entries in the directory
+    # starting at index 17. This game doesn't seem to boot, so we're just going to get rid of it.
+    directory_table[(17 * 0x20):(20 * 0x20)] = b''
+
+    # And pad it out to compensate.
+    directory_table = directory_table.ljust(0x400, b'\xff')
+
+    # Deleting that frees up blocks 0x83 through 0x87. Let's just use 0x83 for overflow for now. Update
+    # the next-block table accordingly.
+    orig_terminator = next_block_table[0x5c]
+    next_block_table[0x5c] = 0x83
+    next_block_table[0x83] = orig_terminator
+
 
     # Then overwrite the important sectors in the output file with chunks from the local buffer.
-    with open(args.out_disk_image, 'r+b') as out_file, io.BytesIO(buf) as data:
+    with open(args.out_disk_image, 'r+b') as out_file, io.BytesIO(output) as data:
 
-        out_file.seek(0x2a230)
+        out_file.seek(0x800 + 0x10)
+        out_file.write(next_block_table)
 
-        while out_file.tell() < 0x31600:
-            out_file.seek(0x10, os.SEEK_CUR)
-            out_file.write(data.read(0x100))
+        out_file.seek(0x910)
+        with io.BytesIO(directory_table) as dir_data:
+            for _ in range(4):
+                out_file.seek(0x10, os.SEEK_CUR)
+                out_file.write(dir_data.read(0x100))
+
+        current_block = directory_table[(11 * 0x20) + 0x1f]
+        while current_block < 0xc0:
+            track_index = current_block // 2
+            sector_index = (current_block % 2) * 8
+            address = track_start_address_list[track_index] + sector_index * 0x110
+
+            out_file.seek(address)
+            for _ in range(8):
+                out_file.seek(0x10, os.SEEK_CUR)
+
+                sector = data.read(0x100).ljust(0x100, b'\xff')
+                out_file.write(sector)
+
+            current_block = next_block_table[current_block]
+
+        leftover_data = data.read()
+        if len(leftover_data) > 0:
+            raise Exception('Ran out of space! {0} bytes were not written.'.format(len(leftover_data)))
