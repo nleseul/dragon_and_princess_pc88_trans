@@ -258,13 +258,17 @@ if __name__ == '__main__':
             if token['op'] == 0x22:
                 try:
                     text = token['content'].decode('shift_jis')
-                    if text in game_text_lookup:
-                        row = game_text_lookup[text]
-
-                        if len(row) > 0 and len(row[0]) > 0:
-                            token['content'] = row[0].encode('shift_jis')
                 except UnicodeDecodeError:
-                    pass
+                    continue
+
+                if text in game_text_lookup:
+                    row = game_text_lookup[text]
+
+                    if len(row) > 0 and len(row[0]) > 0:
+                        try:
+                            token['content'] = row[0].encode('shift_jis')
+                        except UnicodeEncodeError:
+                            print("Translated text \"{0}\" (in line {1}) could not be encoded.".format(row[0], line['line_number']))
             elif token['op'] == 0x84:
                 for index, field in enumerate(token['fields']):
                     try:
