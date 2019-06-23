@@ -65,7 +65,7 @@
 1080,0,ﾀｲﾍﾝﾀﾞ !! ｼｮｸﾘｮｳｶﾞ ｿｺｦ ﾂｲﾀ !!,Oh no!! You're out of food!!,大変だ！！ 食糧が底をついた！！,Oh no!! You're out of food!!,
 1110,0,ﾑｽﾒﾊ ｷｴﾀ..,The girl disappears..,娘は消えた..,The girl disappears..,
 1120,0,ｱﾅﾀﾊ ﾜﾅﾆｵﾁﾃｲﾏｽ,You've fallen in a trap.,あなたは罠に落ちています,You've fallen in a trap,
-1120,1,ｳｴｶﾗ ｺｴｶﾞｼﾏｽ:｢ﾅﾜﾊﾞｼｺﾞﾊ 300K ﾃﾞｽｾﾞ..｣,A voice from above: 「300K for a rope ladder..」,上から声がします:「縄はしごは300Kですぜ..」,A voice from above: 「300K for a rope ladder..」,
+1120,1,ｳｴｶﾗ ｺｴｶﾞｼﾏｽ:｢ﾅﾜﾊﾞｼｺﾞﾊ 300K ﾃﾞｽｾﾞ..｣,A voice from above: 「300K for a rope ladder..｣,上から声がします:「縄はしごは300Kですぜ..」,A voice from above: 「300K for a rope ladder..」,
 1130,0,ﾜｶｲﾑｽﾒﾆﾃﾞｱｲ ｲｴﾏﾃﾞｱﾝﾅｲｻﾚﾏｼﾀ,"Encountering a young girl, you were guided to the house.",若い娘に出会い 家まで案内されました。,"Encountering a young girl, you were guided to the house.",
 1130,1,ﾄﾞｱｰﾉﾄｺﾛﾃﾞ ﾑｽﾒｶﾞﾃﾏﾈｷｼﾃﾏｽ,"Near the door, a girl is beckoning.",ドアーの所で娘が手招きしてます,"Near the door, a girl is beckoning",
 1225,0,* ｼｮｸﾘｮｳｶﾞﾅｲﾉﾃﾞ ﾐﾝﾅ ｵﾅｶｶﾞｽｲﾃﾏｽ,"* There's no food, and everyone is hungry.",* 食糧がないので 皆 お腹が空いてます,"* There's no food, and everyone is hungry",
@@ -211,7 +211,7 @@
 5030,0,ﾔﾌﾞﾉ ﾅｶﾆ ｷﾉｲﾀｶﾞ ｱﾙ,You find a wooden table in the thicket.,,You find a wooden table in the thicket,
 5040,0,ｻｶﾊﾞﾆﾊ ﾜﾅｶﾞ ｱｯﾀ! ﾃﾞﾓ ﾓｳ ｱﾝｼﾝﾀﾞ,There was a trap in the inn! But it's safe now.,,There was a trap in the inn. But it's safe now.,
 5050,0,ﾄﾞｳｸﾂﾊ ﾄﾞｺｶﾆ ﾂｳｼﾞﾃｲﾙ ﾖｳﾀﾞ,It looks like the cave leads somewhere.,,It looks like the cave leads somewhere,
-5060,0,ｱｲﾂﾊ ｽﾘﾀﾞ...ﾖｳｼﾞﾝ ｼﾅｸﾃﾊ...,He's a pickpocket! ...If you’re not careful...,,He is a thief... be careful!,
+5060,0,ｱｲﾂﾊ ｽﾘﾀﾞ...ﾖｳｼﾞﾝ ｼﾅｸﾃﾊ...,He's a pickpocket! ...If you're not careful...,,He is a thief... be careful!,
 5070,0,ｼｶｼ ｺｺﾊ ｳｶﾂﾆ ｳｺﾞｹﾅｲｿﾞ,You can't move carelessly here.,,You can't move carelessly here,
 5075,0,ﾊﾙｶｳｴﾆ Trap door ｶﾞｱﾙ...,Up in the ceiling is a trap door.,,Up in the ceiling is a trap door.,
 5080,0,ﾋﾄﾘﾉ ｵﾄｺｶﾞ ﾃﾞﾃｲｷﾏｽ,A lone man is leaving.,,A man leaves,
@@ -263,7 +263,7 @@
 6200,0,Hit any key,,,,
 6750,0,> Move : ,,,,
 6780,0,Again !  ,,,,
-6780,1,ｲｹﾏｾﾝ !  ,It’s no good!,,Can't do!,"Could mean ""It's hopeless."" ""It's not allowed"" ""Must not do"""
+6780,1,ｲｹﾏｾﾝ !  ,It's no good!,,Can't do!,"Could mean ""It's hopeless."" ""It's not allowed"" ""Must not do"""
 6840,0,ｻﾝ : ----,,,,
 6840,1,  ｻﾝﾉ Cond. : PW= ,  's Cond. : PW= ,,,
 6840,2, SP= ,,,,
