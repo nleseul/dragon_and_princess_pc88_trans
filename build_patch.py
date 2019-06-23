@@ -137,7 +137,8 @@ if __name__ == '__main__':
     parser.add_argument('in_disk_image', help='Disk image to scan for original text.')
     parser.add_argument('out_disk_image', help='Disk image to patch (WILL be modified!).')
 
-    parser.add_argument('--update_csv', help='Whether the CSV files should be created/updated with the strings found in the scan. Will not overwrite old entries.', action='store_true')
+    parser.add_argument('--update-csv', help='Whether the CSV files should be created/updated with the strings found in the scan. Will not overwrite old entries.', action='store_true')
+    parser.add_argument('--easy-mode', help='Whether the game data should be modified to make the game easier (for testing!)', action='store_true')
 
     args = parser.parse_args()
 
@@ -251,6 +252,19 @@ if __name__ == '__main__':
                                     string_index += 1
                             except UnicodeDecodeError:
                                 string_index += 1
+
+    for line in lines:
+        if line['line_number'] == 20160:
+            print(line['tokens'])
+            print(line['tokens'][0])
+            line['tokens'][0]['fields'] = [
+                b'127', b'127', b'100', b'127', b'2.0',
+                b'127', b'127', b'100', b'127', b'2.0',
+                b'127', b'127', b'100', b'127', b'2.0',
+                b'127', b'127', b'100', b'127', b'2.0',
+                b'127', b'127', b'100', b'127', b'2.0',
+            ]
+
 
     # Now scan through and patch in translations as needed.
     for line in lines:
