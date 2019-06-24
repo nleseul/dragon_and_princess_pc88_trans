@@ -18,6 +18,12 @@ def import_csv(filename):
 
     return lookup
 
+def unpack_operations(op_string):
+    op_list = []
+    for c in op_string:
+        op_list.append({'op': c})
+    return op_list
+
 def unpack_bytecode(data):
     lines = []
 
@@ -254,17 +260,48 @@ if __name__ == '__main__':
                                 string_index += 1
 
     for line in lines:
-        if line['line_number'] == 20160:
-            print(line['tokens'])
-            print(line['tokens'][0])
-            line['tokens'][0]['fields'] = [
-                b'127', b'127', b'100', b'127', b'2.0',
-                b'127', b'127', b'100', b'127', b'2.0',
-                b'127', b'127', b'100', b'127', b'2.0',
-                b'127', b'127', b'100', b'127', b'2.0',
-                b'127', b'127', b'100', b'127', b'2.0',
-            ]
 
+        # These two changes allocate the default name array, and use the default name array to assign names.
+        if line['line_number'] == 160:
+            line['tokens'] += unpack_operations(b',DN$(MN)')
+        elif line['line_number'] == 303:
+            line['tokens'][67:80] = unpack_operations(b'DN$(I)')
+
+        # This line contains the initial stats of the characters. The change fills them in with high values
+        # for easy mode if necessary.
+        elif line['line_number'] == 20160:
+            if args.easy_mode:
+                line['tokens'][0]['fields'] = [
+                    b'127', b'127', b'100', b'127', b'2.0',
+                    b'127', b'127', b'100', b'127', b'2.0',
+                    b'127', b'127', b'100', b'127', b'2.0',
+                    b'127', b'127', b'100', b'127', b'2.0',
+                    b'127', b'127', b'100', b'127', b'2.0',
+                ]
+
+
+
+    # Add a line containing the data for the default names array, and a line to read it in on initialization.
+    lines.append({
+        'line_number': 20165,
+        'tokens': [
+            {'op': 0x84, 'content': b' ', 'fields': [b'Gombe', b'Jirosaku', b'Tarosaku', b'Yosaku', b'Goemon']}
+        ]
+    })
+    lines.append({
+        'line_number': 221,
+        'tokens':
+            # FOR I=0 TO MN:
+            unpack_operations(b'\x82I\xf1\x11 \xdc MN:') +
+
+            # READDN$(I):
+            unpack_operations(b'\x87DN$(I):') +
+
+            # NEXT
+            unpack_operations(b'\x83')
+    })
+
+    lines.sort(key=lambda line: line['line_number'])
 
     # Now scan through and patch in translations as needed.
     for line in lines:
