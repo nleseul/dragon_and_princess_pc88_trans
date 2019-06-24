@@ -267,6 +267,42 @@ if __name__ == '__main__':
         elif line['line_number'] == 303:
             line['tokens'][67:80] = unpack_operations(b'DN$(I)')
 
+        # These changes all pertain to the title screen. Moving around a bunch of coordinates to make room for
+        # patch-specific credits.
+        elif line['line_number'] == 18020:
+            # This one just nudges one line up.
+            line['tokens'][49]['op'] = 0x13
+        elif line['line_number'] == 18050:
+
+            # This is the complicated one. First, there's a 'presented by' string that's split across three lines
+            # in the original. Join those up, adjust the spacing accordingly, and delete the extra commands.
+            combined_string = line['tokens'][13]['content'] + b' ' + line['tokens'][31]['content'] + b' ' + line['tokens'][49]['content']
+
+            line['tokens'][2]['op'] = ((40 - len(combined_string)) // 2) + 0x11
+            del line['tokens'][2]['content']
+            line['tokens'][8]['op'] = 0x12
+            line['tokens'][13]['content'] = combined_string
+
+            line['tokens'][18:54] = []
+
+            # Now insert commands for the lines we're injecting.
+            ops_to_insert = []
+
+            for y_spacing, new_credit_line in [(3, b'EN translation patch 0.0a'), (1, b'by Laszlo Benyi & NLeseul')]:
+                x_coord = ((40 - len(new_credit_line)) // 2)
+                ops_to_insert += unpack_operations(b'X\xf1')                   # X=
+                ops_to_insert.append({'op': x_coord + 0x11})
+                ops_to_insert += unpack_operations(b':Y\xf1Y\xf3')             # :Y=Y+
+                ops_to_insert.append({'op': y_spacing + 0x11})
+                ops_to_insert += unpack_operations(b':M$\xf1')                 # :M$=
+                ops_to_insert.append({'op': 0x22, 'terminator': 0x22, 'content': new_credit_line})
+                ops_to_insert += unpack_operations(b':\x8d\x0eDH:')            # :GOSUB18500:
+
+            line['tokens'][36:36] = ops_to_insert
+
+            # Finally, nudge down the final line ('press any key').
+            line['tokens'][84]['op'] = 0x15
+
         # This line contains the initial stats of the characters. The change fills them in with high values
         # for easy mode if necessary.
         elif line['line_number'] == 20160:
