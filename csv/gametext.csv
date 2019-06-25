@@ -256,7 +256,7 @@
 6060,0,ﾍｯ ?,Eh?,,Eh?,
 6070,0,Again !,,,,
 6090,0,Ok !,,,,
-6115,0,ﾃﾝｶﾗ ﾋｶﾘｶﾞｻｼﾀ! ｶﾐﾉｺｴ:｢ﾅﾝｼﾞﾉﾂﾄﾒｦ ﾊﾀｾ..｣,Light shines from the heavens! The voice of God: ｢Purge the unfaithful...｣,天から光が差した！神の声：「難治の仕留めを果たせ...」,"A lightray from the sky appears. God's voice says: ""Your's is a hard job.""",
+6115,0,ﾃﾝｶﾗ ﾋｶﾘｶﾞｻｼﾀ! ｶﾐﾉｺｴ:｢ﾅﾝｼﾞﾉﾂﾄﾒｦ ﾊﾀｾ..｣,Light shines from the heavens! The voice of God: ｢Be done with thy task...｣,天から光が差した！神の声：「難治の勤めを果たせ...」,"A lightray from the sky appears. God's voice says: ""Your's is a hard job.""",
 6125,0,ｺｺｦ ﾃﾞﾏｽｶ(y or n),Are you leaving now? (y or n),,Are you leaving now? (y or n),
 6125,1,y,,,,
 6127,0,ﾌｯ ﾌｯ ﾌｯ....,Ha ha ha...,フッ　フッ　フッ...,Ha ha ha...,
@@ -336,3 +336,4 @@
 18090,0,,,,,
 18550,0, ,,,,
 18560,0, ,,,,
+,,,,,,
