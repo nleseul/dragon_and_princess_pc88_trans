@@ -53,7 +53,7 @@
 690,1, Hit !! ,,,,
 690,2, ,,,,
 690,3,ﾉ ﾀﾞﾒｰｼﾞｦ ｱﾀｴﾀ !!, damage dealt!!,のダメージを与えた！, damage!,
-800,0,ｱﾅﾀﾊ ｹｯｺﾝｼﾃｲﾙﾉﾃﾞｼｮｳ ?,So you're married?,あなたは結婚しているのでしょう？,So you're married?,
+800,0,ｱﾅﾀﾊ ｹｯｺﾝｼﾃｲﾙﾉﾃﾞｼｮｳ ?,Aren’t you married?,あなたは結婚しているのでしょう？,So you're married?,
 910,1,*,,,,
 920,0,*,,,,
 950,0, ,,,,
@@ -65,9 +65,9 @@
 1080,0,ﾀｲﾍﾝﾀﾞ !! ｼｮｸﾘｮｳｶﾞ ｿｺｦ ﾂｲﾀ !!,Oh no!! You're out of food!!,大変だ！！ 食糧が底をついた！！,Oh no!! You're out of food!!,
 1110,0,ﾑｽﾒﾊ ｷｴﾀ..,The girl disappears..,娘は消えた..,The girl disappears..,
 1120,0,ｱﾅﾀﾊ ﾜﾅﾆｵﾁﾃｲﾏｽ,You've fallen in a trap.,あなたは罠に落ちています,You've fallen in a trap,
-1120,1,ｳｴｶﾗ ｺｴｶﾞｼﾏｽ:｢ﾅﾜﾊﾞｼｺﾞﾊ 300K ﾃﾞｽｾﾞ..｣,A voice from above: 「300K for a rope ladder..｣,上から声がします:「縄はしごは300Kですぜ..」,A voice from above: 「300K for a rope ladder..」,
-1130,0,ﾜｶｲﾑｽﾒﾆﾃﾞｱｲ ｲｴﾏﾃﾞｱﾝﾅｲｻﾚﾏｼﾀ,"Encountering a young girl, you were guided to the house.",若い娘に出会い 家まで案内されました。,"Encountering a young girl, you were guided to the house.",
-1130,1,ﾄﾞｱｰﾉﾄｺﾛﾃﾞ ﾑｽﾒｶﾞﾃﾏﾈｷｼﾃﾏｽ,"Near the door, a girl is beckoning.",ドアーの所で娘が手招きしてます,"Near the door, a girl is beckoning",
+1120,1,ｳｴｶﾗ ｺｴｶﾞｼﾏｽ:｢ﾅﾜﾊﾞｼｺﾞﾊ 300K ﾃﾞｽｾﾞ..｣,A voice from above: ｢300K for a rope ladder..｣,上から声がします:「縄はしごは300Kですぜ..」,A voice from above: 「300K for a rope ladder..」,
+1130,0,ﾜｶｲﾑｽﾒﾆﾃﾞｱｲ ｲｴﾏﾃﾞｱﾝﾅｲｻﾚﾏｼﾀ,"You meet a young girl, and she invites you to her house.",若い娘に出会い 家まで案内されました。,"Encountering a young girl, you were guided to the house.",
+1130,1,ﾄﾞｱｰﾉﾄｺﾛﾃﾞ ﾑｽﾒｶﾞﾃﾏﾈｷｼﾃﾏｽ,The girl is beckoning by the door.,ドアーの所で娘が手招きしてます,"Near the door, a girl is beckoning",
 1225,0,* ｼｮｸﾘｮｳｶﾞﾅｲﾉﾃﾞ ﾐﾝﾅ ｵﾅｶｶﾞｽｲﾃﾏｽ,"* There's no food, and everyone is hungry.",* 食糧がないので 皆 お腹が空いてます,"* There's no food, and everyone is hungry",
 1230,0,Ok ,,,,
 1330,0,ﾜﾅ ﾆ ｵﾁﾃｼﾏｯﾀ !,You fell in a trap!,罠に落ちてしまった！,You fell in a trap!,
@@ -139,16 +139,16 @@
 2640,1,ﾄ ﾌﾟﾘﾝｾｽ ,", along with the princess,",,and the princess,
 2641,0,ｶﾞ ﾒﾉﾏｴﾆ ｲﾙ, is before you.,,are before you.,
 2641,1,"ｺﾉﾍﾔﾊ ﾄﾃﾓﾋﾛｸ,ﾀｸｻﾝﾉ ｷｼﾀﾁｶﾞﾋｶｴﾃｲﾙ",The hall is wide and teeming with knights.,,The hall is wide and teeming with knights,
-2650,0,ﾔﾏﾉﾅｶﾆ ﾋｷｺﾓｯﾀ ｾﾝﾆﾝｶﾞｽﾝﾃﾞｲﾙ,The hermit sailor lives in the mountains.,,The hermit sailor lives in the mountains,
+2650,0,ﾔﾏﾉﾅｶﾆ ﾋｷｺﾓｯﾀ ｾﾝﾆﾝｶﾞｽﾝﾃﾞｲﾙ,A mountain monk lives here in seclusion.,山の中に引き篭もった仙人が住んでいる,The hermit sailor lives in the mountains,
 2650,1,ｶﾍﾞﾆﾊ ﾋｶﾘｶｶﾞﾔｸ ｿｰﾄﾞｶﾞｻｻｯﾃｲﾙ,A sparkling sword is stuck in the wall.,,A sparkling sword is stuck in the wall,
-2650,2,ﾅﾆﾓ ﾅｸﾅｯﾃｼﾏｯﾀ..,It's emptied..,何もなくなってしまった...,It's all empty...,
+2650,2,ﾅﾆﾓ ﾅｸﾅｯﾃｼﾏｯﾀ..,It's empty now..,何もなくなってしまった...,It's all empty...,
 2655,0,ｳﾂｸｼｲ ﾐｽﾞｳﾐｶﾞﾏﾈｲﾃｲﾙ｡ ﾐﾝﾅﾃﾞｵﾖｺﾞｳ!,The lake is pretty. Everyone wants to swim!,,The lake is pretty. Everyone wants to swim!,
 2660,0,ｵｵｷﾅ ﾏﾁﾉﾓﾝｶﾞ ﾐｴﾙ,You see the city's big gate.,,You see the city's big gate,"It could be ""You see the big city's gate"" as well"
 2665,0,ｸﾗｲ....,It's dark.,,It's dark,
 2670,0,ﾀｸｻﾝﾉ ﾌﾞｷｶﾞｳｯﾃｲﾙ,They sell lots of weapons here.,,The sell lots of weapons here,
 2670,1,ｳﾏｿｳﾅ ﾀﾍﾞﾓﾉｶﾞｱﾙ,The food looks tasty.,,The food looks tasty,
 2670,2,ﾌﾝｲｷｶﾞ ﾜﾙｲ..,The mood is awful here.,,The mood is awful here,It refers to the general atmoshpere of the place
-2685,0,ｶﾞｱﾙ,is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
+2685,0,ｶﾞｱﾙ, is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
 2690,0,ﾃﾞｽｸ,Desk,,Desk,
 2692,0,ﾎﾝ,Book,,Book,
 2694,0,ﾔﾌﾞﾚﾀ ﾄﾞｱｰ,A broken door,,A broken door,"It was destroyed by someone, not time."
@@ -171,11 +171,11 @@
 2830,0,ｺｺﾊ ,This is ,,,
 2830,1, Street ﾃﾞｽ, Street.,,,
 2840,0,ｺｺﾆﾊ , ,,,
-2840,1,ｶﾞｱﾙ,is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
+2840,1,ｶﾞｱﾙ, is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
 2841,0,ｺｺﾆﾊ , ,,,
-2841,1,ｶﾞｱﾙ,is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
+2841,1,ｶﾞｱﾙ, is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
 2842,0,ｺｺﾆﾊ , ,,,
-2842,1,ｶﾞｱﾙ,is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
+2842,1,ｶﾞｱﾙ, is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
 2850,0,ﾏﾁﾉ ﾓﾝｶﾞｱﾙ,The town's gate is here.,町の門がある,The town's gate is here.,
 2860,0,ﾀｸｻﾝﾉ ﾀﾃﾓﾉｶﾞｱﾙ,There are lots of buildings around,,There are lots of buildings around,
 2880,0,ﾐﾁｶﾞ ﾊﾙｶｶﾅﾀﾏﾃﾞ ﾉﾋﾞﾃｲﾙﾖｳﾀﾞ,The road stretches off to the horizon.,,It looks like the road leads very far,
@@ -196,7 +196,7 @@
 4540,0,ｻﾝﾊ H.P=,'s HP is now ,,,
 4540,1,ﾄ ﾅｯﾀ,.,,,
 4570,0,ﾏｼﾞｯｸ ｿｰﾄﾞｦ ﾃﾆｲﾚﾀ!!,You got a magic sword!!,,You got a magic sword!!,
-4575,0,ﾜｶｲﾑｽﾒﾆ ﾃｦﾀﾞｽﾉｶ?,Do you reach for the girl?,,Do you reach for the girl?,"Could be: ""Do you hold your arm(s) for the girl?"""
+4575,0,ﾜｶｲﾑｽﾒﾆ ﾃｦﾀﾞｽﾉｶ?,Will you take the girl’s hand?,,Do you reach for the girl?,"Could be: ""Do you hold your arm(s) for the girl?"""
 4610,0,ｵﾒﾃﾞﾄｳｺﾞｻﾞｲﾏｽ !!,Congratulations!,,Congratulations!,
 4610,1,ﾕｳｼｭｳﾅ ,The excellent ,,The excellent ,
 4610,2,ｻﾝｶﾞ ﾌﾟﾘﾝｾｽﾄ ｹｯｺﾝｼﾏｼﾀ, married the princess.,, married the princess,
@@ -218,8 +218,8 @@
 5080,1,ｻｹｸｻｲ...,It reeks of alcohol...,,You smell alcohol,
 5085,0,ﾄﾞﾗｺﾞﾝ ｼｭﾂｹﾞﾝ !!,The dragon appeared!!,,The dragon appeared!!,
 5085,1,ｺｲﾂｦﾀｵｾﾊﾞ ﾌﾟﾘﾝｾｽｦﾄﾘﾓﾄﾞｾﾙ !!,"If you kill it, you can save the princess!!",,"If you kill it, you can save the princess!!",
-5090,0,ｺﾔﾉ ｾﾝﾆﾝﾊ ｲｲﾏｼﾀ:｢,The sailor in the hut says: ｢,,"The sailor in the hut says: """,
-5096,0,ﾏﾁﾉ ﾅｶﾆﾊ ｱｼﾞﾄｶﾞ ｱﾙ｡,There is a hideout in the city.,,There is a hideout in the city.,
+5090,0,ｺﾔﾉ ｾﾝﾆﾝﾊ ｲｲﾏｼﾀ:｢,The monk in the hut says: ｢,,"The sailor in the hut says: """,
+5096,0,ﾏﾁﾉ ﾅｶﾆﾊ ｱｼﾞﾄｶﾞ ｱﾙ｡,The bandits have a safe house in the town.,,There is a hideout in the city.,
 5097,0,ﾄﾞﾗｺﾞﾝﾊ ﾔﾏﾆ ｲﾙ｡ｺｺﾉ ｿｰﾄﾞｦ ﾓｯﾃｲｹ!,The dragon lives in the mountains. Take this sword with you!,,The dragon lives in the mountains. Take this sword with you!,
 5097,1,ﾓｯﾄ ｹｲｹﾝｦ ﾂﾒ!!,You're not experienced enough.,,You're not experienced enough.,You still have to collect more experience.
 5099,0,..｣,..｣,,"...""",
@@ -336,4 +336,3 @@
 18090,0,,,,,
 18550,0, ,,,,
 18560,0, ,,,,
-,,,,,,

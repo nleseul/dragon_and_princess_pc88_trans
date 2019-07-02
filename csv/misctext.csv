@@ -47,8 +47,8 @@
 20060,2,ﾔﾏｺﾞﾔ ﾉ ﾏｴ,Mountain Hut,,Mountain Hut,In front of a hut on the mountain
 20060,3,ﾔﾏ 'Mt.Lu-Fey',Mt. Lu-Fey,,Mt. Lu-Fey,
 20060,4,ﾔﾏ 'Mt.Lu-Fey',Mt. Lu-Fey,,Mt. Lu-Fey,
-20060,5,ﾔﾏｺﾞﾔ ﾉ ﾅｶ,In the Mountain Hut,,In the Mountain Hut,Inside of the hut on the mountain
-20060,6,ｻﾝｿﾞｸ ﾉ ｽﾐｶ,Bandits' House,,Bandits' House,
+20060,5,ﾔﾏｺﾞﾔ ﾉ ﾅｶ,Mountain Hut Interior,,In the Mountain Hut,Inside of the hut on the mountain
+20060,6,ｻﾝｿﾞｸ ﾉ ｽﾐｶ,Bandits' Hideout,,Bandits' House,
 20060,7,ﾏﾁ 'Ross-Blue Town' ﾉ ﾓﾝ,Ross-Blue Town's Gate,,Ross-Blue Town's Gate,
 20070,0,ﾏﾁ ﾉ ｲﾘｸﾞﾁ,Town Entrance,,Town Entrance,
 20070,1,3ｻ ﾛ,3-Way Junction,三叉路,,
@@ -73,7 +73,7 @@
 20090,3,ﾌﾞｷ ﾉ ﾐｾ 'HAYASE',Weapons Shop 'Hayase',,"Weapons Shop ""Hayase""",
 20090,4,ｼｮｸﾘｮｳ ﾉ ﾐｾ 'LOCKE',Food Store 'Locke',,"Food Store ""Locke""",
 20090,5,ｻｶﾊﾞ 'KOEI',Pub KOEI,,Pub KOEI,
-20090,6,ｻﾝｿﾞｸ ﾉ ｱｼﾞﾄ,Bandit Hideout,,Bandit Hideout,
+20090,6,ｻﾝｿﾞｸ ﾉ ｱｼﾞﾄ,Bandit Safe House,,Bandit Hideout,
 20100,0,EASTSIDE,,,,
 20100,1,EASTSIDE-SALT,,,,
 20100,2,LUCKY-EASTSIDE,,,,
@@ -108,7 +108,7 @@
 20120,11,ｲﾔﾘﾝｸﾞx2,Earring x2,,Earring x2,
 20120,12,ﾄﾞﾚｽ,Dress,,Dress,
 20120,13,ﾄﾞﾚｽ,Dress,,Dress,
-20120,14,ﾕﾋﾞﾜ(ﾀﾞｲﾔ),Diamond Earring,,Diamond Earring,
+20120,14,ﾕﾋﾞﾜ(ﾀﾞｲﾔ),Diamond Ring,,Diamond Earring,
 30000,0,ｻﾝｿﾞｸ,Bandit,,Bandit,Or Bandits
 30001,0,ｸﾞﾘｽﾞﾘｰ･ﾍﾞｱｰ,Grizzly Bear,,Grizzly Bear,
 30002,0,ﾓﾝｽﾀｰ,Monster,,Monster,
@@ -120,4 +120,3 @@
 30008,0,ﾄﾞﾗｺﾞﾝ,Dragon,,Dragon,
 30009,0,ｻﾝｿﾞｸ,Bandit,,Bandit,
 30010,0,ｻﾝｿﾞｸ ﾉ ﾘｰﾀﾞｰ,Bandit Leader,,Bandit Leader,
-,,,,,,
