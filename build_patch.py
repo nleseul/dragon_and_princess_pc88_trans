@@ -267,6 +267,10 @@ if __name__ == '__main__':
         elif line['line_number'] == 303:
             line['tokens'][67:80] = unpack_operations(b'DN$(I)')
 
+        # As part of easy mode, this disables the check for random encounters.
+        elif line['line_number'] == 5510:
+            line['tokens'] = [{'op': 0x8f, 'content': b'Encounters disabled!'}]
+
         # These changes all pertain to the title screen. Moving around a bunch of coordinates to make room for
         # patch-specific credits.
         elif line['line_number'] == 18020:
@@ -287,11 +291,18 @@ if __name__ == '__main__':
 
             # Now insert commands for the lines we're injecting.
             ops_to_insert = []
+            new_credit_lines = [(3, b'EN translation patch 0.0a'), (1, b'by Laszlo Benyi & NLeseul')]
+            if args.easy_mode:
+                new_credit_lines.append((1, b'EASY MODE!!'))
+                #pass
 
-            for y_spacing, new_credit_line in [(3, b'EN translation patch 0.0a'), (1, b'by Laszlo Benyi & NLeseul')]:
+            for y_spacing, new_credit_line in new_credit_lines:
                 x_coord = ((40 - len(new_credit_line)) // 2)
                 ops_to_insert += unpack_operations(b'X\xf1')                   # X=
-                ops_to_insert.append({'op': x_coord + 0x11})
+                if x_coord <= 10:
+                    ops_to_insert.append({'op': x_coord + 0x11})
+                else:
+                    ops_to_insert.append({'op': 0xf, 'content': bytes([x_coord])})
                 ops_to_insert += unpack_operations(b':Y\xf1Y\xf3')             # :Y=Y+
                 ops_to_insert.append({'op': y_spacing + 0x11})
                 ops_to_insert += unpack_operations(b':M$\xf1')                 # :M$=
@@ -300,8 +311,9 @@ if __name__ == '__main__':
 
             line['tokens'][36:36] = ops_to_insert
 
-            # Finally, nudge down the final line ('press any key').
-            line['tokens'][84]['op'] = 0x15
+            # Finally, if we haven't added the extra "easy mode" line, nudge down the final line ('press any key').
+            if not args.easy_mode:
+                line['tokens'][84]['op'] = 0x15
 
         # This line contains the initial stats of the characters. The change fills them in with high values
         # for easy mode if necessary.
