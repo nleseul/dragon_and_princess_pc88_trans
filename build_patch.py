@@ -267,6 +267,11 @@ if __name__ == '__main__':
         elif line['line_number'] == 303:
             line['tokens'][67:80] = unpack_operations(b'DN$(I)')
 
+        # These lines print the names of shops present in the location in town... they contain a prefix
+        # string that isn't necessary in English. Remove it.
+        elif line['line_number'] == 2840 or line['line_number'] == 2841 or line['line_number'] == 2842:
+            del line['tokens'][7]
+
         # As part of easy mode, this disables the check for random encounters.
         elif line['line_number'] == 5510:
             line['tokens'] = [{'op': 0x8f, 'content': b'Encounters disabled!'}]
