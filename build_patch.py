@@ -2,6 +2,7 @@ import argparse
 import csv
 import io
 import os
+import shutil
 import sys
 
 def import_csv(filename):
@@ -141,7 +142,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser('Main patch build for Dragon & Princess')
     parser.add_argument('in_disk_image', help='Disk image to scan for original text.')
-    parser.add_argument('out_disk_image', help='Disk image to patch (WILL be modified!).')
+    parser.add_argument('out_disk_image', help='Output disk image. Will be overwritten if already present.')
 
     parser.add_argument('--update-csv', help='Whether the CSV files should be created/updated with the strings found in the scan. Will not overwrite old entries.', action='store_true')
     parser.add_argument('--easy-mode', help='Whether the game data should be modified to make the game easier (for testing!)', action='store_true')
@@ -417,6 +418,9 @@ if __name__ == '__main__':
     next_block_table[0x5c] = 0x83
     next_block_table[0x83] = orig_terminator
 
+
+    # Make a new copy of the input image at the output file name.
+    shutil.copyfile(args.in_disk_image, args.out_disk_image)
 
     # Then overwrite the important sectors in the output file with chunks from the local buffer.
     with open(args.out_disk_image, 'r+b') as out_file, io.BytesIO(output) as data:
