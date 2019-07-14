@@ -275,7 +275,8 @@ if __name__ == '__main__':
 
         # As part of easy mode, this disables the check for random encounters.
         elif line['line_number'] == 5510:
-            line['tokens'] = [{'op': 0x8f, 'content': b'Encounters disabled!'}]
+            if args.easy_mode:
+                line['tokens'] = [{'op': 0x8f, 'content': b'Encounters disabled!'}]
 
         # These changes all pertain to the title screen. Moving around a bunch of coordinates to make room for
         # patch-specific credits.
@@ -297,10 +298,9 @@ if __name__ == '__main__':
 
             # Now insert commands for the lines we're injecting.
             ops_to_insert = []
-            new_credit_lines = [(3, b'EN translation patch 0.8a'), (1, b'by Laszlo Benyi & NLeseul')]
+            new_credit_lines = [(3, b'EN translation patch 0.81a'), (1, b'by Laszlo Benyi & NLeseul')]
             if args.easy_mode:
                 new_credit_lines.append((1, b'EASY MODE!!'))
-                #pass
 
             for y_spacing, new_credit_line in new_credit_lines:
                 x_coord = ((40 - len(new_credit_line)) // 2)
