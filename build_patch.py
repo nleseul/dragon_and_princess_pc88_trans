@@ -138,6 +138,11 @@ def pack_bytecode(lines):
     return output
 
 
+def update_random_string(line, string_index, string_count, length_index_1, length_index_2):
+    string_length = len(line['tokens'][string_index]['content'])
+    line['tokens'][length_index_1]['content'] = int.to_bytes(string_length // string_count, 1, byteorder='big')
+    line['tokens'][length_index_2]['content'] = line['tokens'][length_index_1]['content']
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser('Main patch build for Dragon & Princess')
@@ -260,30 +265,33 @@ if __name__ == '__main__':
                             except UnicodeDecodeError:
                                 string_index += 1
 
+
+    # These are changes that happen before the translations are added.
     for line in lines:
+        line_number = line['line_number']
 
         # These two changes allocate the default name array, and use the default name array to assign names.
-        if line['line_number'] == 160:
+        if line_number == 160:
             line['tokens'] += unpack_operations(b',DN$(MN)')
-        elif line['line_number'] == 303:
+        elif line_number == 303:
             line['tokens'][67:80] = unpack_operations(b'DN$(I)')
 
         # These lines print the names of shops present in the location in town... they contain a prefix
         # string that isn't necessary in English. Remove it.
-        elif line['line_number'] == 2840 or line['line_number'] == 2841 or line['line_number'] == 2842:
+        elif line_number == 2840 or line_number == 2841 or line_number == 2842:
             del line['tokens'][7]
 
         # As part of easy mode, this disables the check for random encounters.
-        elif line['line_number'] == 5510:
+        elif line_number == 5510:
             if args.easy_mode:
                 line['tokens'] = [{'op': 0x8f, 'content': b'Encounters disabled!'}]
 
         # These changes all pertain to the title screen. Moving around a bunch of coordinates to make room for
         # patch-specific credits.
-        elif line['line_number'] == 18020:
+        elif line_number == 18020:
             # This one just nudges one line up.
             line['tokens'][49]['op'] = 0x13
-        elif line['line_number'] == 18050:
+        elif line_number == 18050:
 
             # This is the complicated one. First, there's a 'presented by' string that's split across three lines
             # in the original. Join those up, adjust the spacing accordingly, and delete the extra commands.
@@ -323,7 +331,7 @@ if __name__ == '__main__':
 
         # This line contains the initial stats of the characters. The change fills them in with high values
         # for easy mode if necessary.
-        elif line['line_number'] == 20160:
+        elif line_number == 20160:
             if args.easy_mode:
                 line['tokens'][0]['fields'] = [
                     b'127', b'127', b'100', b'127', b'2.0',
@@ -394,6 +402,44 @@ if __name__ == '__main__':
                         pass
 
 
+    # These are changes that happen after the translations are added.
+    cached_line_1640 = None
+    for line in lines:
+        line_number = line['line_number']
+
+        # These lines contain multiple lines of text packed into one string, with a random selection of one substring.
+        # The syntax is always something like MID$("String1String2String3", INT(RND(3)+1)*7, 7).
+        # We need to adjust the length that it uses for the substrings.
+        if line_number == 570:
+            update_random_string(line, 4, 5, 18, 22)
+        elif line_number == 1395:
+            update_random_string(line, 17, 2, 31, 35)
+        elif line_number == 1610:
+            update_random_string(line, 13, 5, 27, 31)
+        elif line_number == 1620:
+            update_random_string(line, 25, 2, 39, 43)
+        elif line_number == 1630:
+            update_random_string(line, 13, 2, 27, 31)
+        elif line_number == 1640:
+            cached_line_1640 = line
+        elif line_number == 1650:
+            # This is a slightly strange case. They compute the string index
+            # on 1640 and then use it in 1650. We need to check the length of the
+            # new string here and then put it back in 1640.
+            string_length_bytes = int.to_bytes(len(line['tokens'][4]['content']) // 6, 1, byteorder='big')
+            line['tokens'][8]['content'] = string_length_bytes
+            cached_line_1640['tokens'][26]['content'] = string_length_bytes
+            cached_line_1640['tokens'][47]['content'] = string_length_bytes
+        elif line_number == 1760:
+            update_random_string(line, 7, 2, 21, 25)
+        elif line_number == 2105:
+            update_random_string(line, 56, 2, 70, 74)
+        elif line_number == 2200:
+            update_random_string(line, 38, 2, 52, 56)
+        elif line_number == 5250:
+            update_random_string(line, 4, 3, 18, 22)
+
+
     output = pack_bytecode(lines)
 
     print('Orig {0}, result {1}'.format(len(buf), len(output)))
@@ -412,11 +458,12 @@ if __name__ == '__main__':
     # And pad it out to compensate.
     directory_table = directory_table.ljust(0x400, b'\xff')
 
-    # Deleting that frees up blocks 0x83 through 0x87. Let's just use 0x83 for overflow for now. Update
+    # Deleting that frees up blocks 0x83 through 0x87. Let's just use 0x83~0x84 for overflow for now. Update
     # the next-block table accordingly.
     orig_terminator = next_block_table[0x5c]
     next_block_table[0x5c] = 0x83
-    next_block_table[0x83] = orig_terminator
+    next_block_table[0x83] = 0x84
+    next_block_table[0x84] = orig_terminator
 
 
     # Make a new copy of the input image at the output file name.

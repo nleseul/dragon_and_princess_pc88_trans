@@ -34,7 +34,7 @@
 505,0,Time:######,,,,
 550,0,ｱﾅﾀ ﾊ ｲﾏ ,You are now at ,あなたは今,You are now at,
 550,1, ﾆ ｲﾏｽ｡,.,にいます。,.,
-570,0,ｿﾚ ﾊ ｲｲ ｶﾝｶﾞｴﾀﾞ !ﾄﾞｳﾔｯﾃ ｿﾚ ｦ ｽﾙﾉ ?ﾔｯﾃ ﾐｾﾃ ｸﾚﾖ      ｼﾞｮｳﾀﾞﾝ ｶﾞ ｳﾏｲﾈ  ｲﾏ ﾊ ﾃﾞｷﾏｾﾝ !    ,Interesting idea!But how?         Give it a try!   Good joke!       You can't now!   ,それはいい考えだ！・どうやって　それをするの？・やってみせてくれよ・冗談が美味いね・今は出来ません！,That's a good thought! / How will you do that? / Give it a try! / Good joke! / You can't do that now!,
+570,0,ｿﾚ ﾊ ｲｲ ｶﾝｶﾞｴﾀﾞ !ﾄﾞｳﾔｯﾃ ｿﾚ ｦ ｽﾙﾉ ?ﾔｯﾃ ﾐｾﾃ ｸﾚﾖ      ｼﾞｮｳﾀﾞﾝ ｶﾞ ｳﾏｲﾈ  ｲﾏ ﾊ ﾃﾞｷﾏｾﾝ !    ,That's an interesting idea!How would you do that?     Explain how you'd do that? That's a funny joke!       You can't do that now!     ,それはいい考えだ！・どうやって　それをするの？・やってみせてくれよ・冗談が美味いね・今は出来ません！,That's a good thought! / How will you do that? / Give it a try! / Good joke! / You can't do that now!,
 590,0,NSEW,,,,
 590,1, ,,,,
 595,0,ﾉ ﾎｳｺｳﾆ ｲｹｿｳﾃﾞｽ,seem to be exits.,の方向に行けそうです,seem to be the directions you can go.,
@@ -77,19 +77,19 @@
 1350,1,ｵｵｻﾏ ﾊ ｲｲﾏｼﾀ:｢ﾏﾀﾞ ｻﾝｿﾞｸﾊ ｲﾙ｡ ﾄｯﾄ ﾄ ｳｾﾛ ! ﾊﾞｶﾓﾉﾒ !｣,The king says ｢There are still bandits. Get out of my sight! Fool!｣,,"The king says ""There are still bandits. Get out of my sight! Fool!""",
 1360,0,ｱﾅﾀﾊ ﾄﾞｳｸﾂｦ ﾄｳﾘﾇｹ ｿﾄﾆ ｽﾍﾞﾘｵﾁﾏｼﾀ｡,You went through the cave.,,You went through the cave.,You went through the cave and exited on the other side.
 1370,0,ﾓﾝｦ ｸｸﾞﾘ ﾏﾁﾆ ﾊｲﾘﾏﾝﾀ｡,You entered the city.,,You entered the city.,You entered the city throught the (main) gate.
-1395,0,ｲｯﾀｲ ﾄﾞｺﾆ ﾊｲﾙﾉ ?      ｿﾝﾅ ﾄｺﾆ ﾊｲﾙﾉﾊ ﾁｮｯﾄ...,What would you enter? Enter now? Okay...   ,一体どこに入るの？・そんなとこに入るのはちょっと...,What in the world do you enter? / Entering somewhere like this is a bit...,
+1395,0,ｲｯﾀｲ ﾄﾞｺﾆ ﾊｲﾙﾉ ?      ｿﾝﾅ ﾄｺﾆ ﾊｲﾙﾉﾊ ﾁｮｯﾄ...,What exactly are you entering? There's not much to enter here.,一体どこに入るの？・そんなとこに入るのはちょっと...,What in the world do you enter? / Entering somewhere like this is a bit...,
 1400,0,｢ｲｯﾃ ﾗｯｼｬｲ ﾏｾ !｣,｢Take care!｣,,"Take care!""",
 1420,0,ﾓﾝｦ ｸｸﾞｯﾃ ﾏﾁﾉ ｿﾄﾍ ﾃﾞﾏｼﾀ｡,You leave the city through the gates.,,You leave the city through the gates.,
 1450,0,ｵﾄｺｶﾞ ﾄﾞｱｰﾉｶｹﾞﾆｲﾙ....,The man lurks behind the door...,,Behind the door there is a man...,
 1495,0,ﾄﾞｺﾍ ﾃﾞﾙﾉ ?,Where are you going?,,Where are you going?,
 1530,0,ｺﾉﾏﾏ ｲｸﾄ ﾏﾖｲﾏｽﾖ !,"If you continue that way, you'll get lost!",,"If you continue that way, you'll get lost!",
-1610,0,ｴﾀﾞｶﾞ ｵｵｸﾃ ﾄｵﾚﾏｾﾝｿﾁﾗﾊ ﾓﾘｶﾞ ﾌｶｽｷﾞﾏｽｿﾁﾗﾊ ｸﾗｽｷﾞﾃ...   ｸﾗｲ...ﾄﾃﾓ..ｸﾗｲ...ｺｺﾃﾞ ﾏﾖｳﾉﾊ ﾁｮｯﾄ..,Too many branchesForest too thick Too dark that wayDark...so dark...Lost here...?    ,枝が多くて通れません・そちらは森が深すぎます・そちらは暗すぎて...・暗い...とても...暗い・ここで迷うのはちょっと...,"There are lots of branches, and you can't pass through. / The forest is too thick that way. / It's too dark that way. / Dark... so dark... / Getting lost here is a bit...",
-1620,0,ｶﾍﾞｦ ｺﾜｻﾅｲﾄ ｿﾁﾗﾆﾊ..ｶﾍﾞﾆ ﾌﾞﾂｶﾙﾄ ｲﾀｲﾃﾞｽﾖ,Break that wall??  Hit the wall. Ow!  ,壁を壊さないとそちらには...・壁に打つかるといたいですよ,"If you don't break through the wall, that way... / You collide with the wall, and it hurts!",
-1630,0,ｿｳﾅﾝ ｼﾀｲﾉ ? ｳｯ! ｶﾞｹｶﾗ...,"Dangerous!  Um, cliff...",遭難したいの？・うっ！崖から...,Do you want to wreck the ship? / Whoa! There are cliffs...,
-1650,0,ﾐﾁ ﾅﾝﾃ ﾄﾞｺﾆ ｱﾙﾉ ?ｿﾁﾗﾆﾊ ｲｹﾅｲﾉﾃﾞｽｶﾞ ｺｺﾃﾞ ﾏﾖｳ ﾜｹ ﾆﾊ...ｳｯ! ﾄﾞｺﾆ ｲｷﾀｲﾝﾀﾞ!ﾍｯ ? ﾄﾞｯﾁﾆ ｲｸｯﾃ??ｱﾉﾈ ｿｯﾁﾊﾈ ｲｹﾅｲﾉﾈ ,Is there a road? Can't go there.  You'll get lost! Whoa! Go where?  Eh? Go where??   Um... you can't. ,道なんてどこにあるの？・そちらには行けないのですが・ここで迷う受けには...・わっ！どこに行きたいんだ！・へっ？どっちに行けって？？・あのねそっちはね行けないのね,"Is there a road or something? / But you can't go that way. / You'll get lost in that direction... / Whoa! Where are you trying to go? / Eh? Go where?? / Um... that way... you can't go there, you know?",
-1680,0,ｳｯ... ﾐﾁﾆ ﾏﾖｯﾃ ｼﾏｯﾀ !!!,"Oh, I'm lost!!!",,"Oh, I'm lost!!!",
+1610,0,ｴﾀﾞｶﾞ ｵｵｸﾃ ﾄｵﾚﾏｾﾝｿﾁﾗﾊ ﾓﾘｶﾞ ﾌｶｽｷﾞﾏｽｿﾁﾗﾊ ｸﾗｽｷﾞﾃ...   ｸﾗｲ...ﾄﾃﾓ..ｸﾗｲ...ｺｺﾃﾞ ﾏﾖｳﾉﾊ ﾁｮｯﾄ..,You can't get through all the branches.The forest is much too thick that way. It's too dark that way...              It's so dark... There's no use...      Better not get lost here...            ,枝が多くて通れません・そちらは森が深すぎます・そちらは暗すぎて...・暗い...とても...暗い・ここで迷うのはちょっと...,"There are lots of branches, and you can't pass through. / The forest is too thick that way. / It's too dark that way. / Dark... so dark... / Getting lost here is a bit...",
+1620,0,ｶﾍﾞｦ ｺﾜｻﾅｲﾄ ｿﾁﾗﾆﾊ..ｶﾍﾞﾆ ﾌﾞﾂｶﾙﾄ ｲﾀｲﾃﾞｽﾖ,Do you expect to smash the wall?You run into the wall. Ouch!    ,壁を壊さないとそちらには...・壁に打つかるといたいですよ,"If you don't break through the wall, that way... / You collide with the wall, and it hurts!",
+1630,0,ｿｳﾅﾝ ｼﾀｲﾉ ? ｳｯ! ｶﾞｹｶﾗ...,"You'll fall to your death!Whoa! There are cliffs... ",遭難したいの？・うっ！崖から...,Do you want to wreck the ship? / Whoa! There are cliffs...,
+1650,0,ﾐﾁ ﾅﾝﾃ ﾄﾞｺﾆ ｱﾙﾉ ?ｿﾁﾗﾆﾊ ｲｹﾅｲﾉﾃﾞｽｶﾞ ｺｺﾃﾞ ﾏﾖｳ ﾜｹ ﾆﾊ...ｳｯ! ﾄﾞｺﾆ ｲｷﾀｲﾝﾀﾞ!ﾍｯ ? ﾄﾞｯﾁﾆ ｲｸｯﾃ??ｱﾉﾈ ｿｯﾁﾊﾈ ｲｹﾅｲﾉﾈ ,"Where could the road be?   But you can't go that way. Better not get lost here...Whoa! Where are you going? Eh? Which way did you say? So, that way...? You can't.",道なんてどこにあるの？・そちらには行けないのですが・ここで迷う受けには...・わっ！どこに行きたいんだ！・へっ？どっちに行けって？？・あのねそっちはね行けないのね,"Is there a road or something? / But you can't go that way. / You'll get lost in that direction... / Whoa! Where are you trying to go? / Eh? Go where?? / Um... that way... you can't go there, you know?",
+1680,0,ｳｯ... ﾐﾁﾆ ﾏﾖｯﾃ ｼﾏｯﾀ !!!,"Oops... you got lost!!!",,"Oh, I'm lost!!!",
 1750,0,ﾔｯﾄ ｼｯﾃﾙ ﾊﾞｼｮﾆ ﾃﾞﾀｿﾞ !!,"Finally, you recognize the landscape!!",,"Finally, you recognize the landscape!!",
-1760,0,ﾏﾀﾞ ﾐﾁｶﾞ ﾜｶﾗﾅｲ...ｺｺ ﾊ ﾄﾞｺﾅﾝﾀﾞ !!  ,Still lost...    Where are we??   ,未だ道が分からない...・ここはどこ何だ！！,You don't know the way yet... / Where are we??,
+1760,0,ﾏﾀﾞ ﾐﾁｶﾞ ﾜｶﾗﾅｲ...ｺｺ ﾊ ﾄﾞｺﾅﾝﾀﾞ !!  ,You're still lost... Where could this be??,未だ道が分からない...・ここはどこ何だ！！,You don't know the way yet... / Where are we??,
 1780,0,ﾐｽﾞｳﾐ ｦ ｵﾖｲﾃﾞ ﾜﾀﾘﾏｼﾀ｡ ﾐﾝﾅ ｵﾖｷﾞｶﾞ ｼﾞｮｳｽﾞ ﾃﾞｼﾀ !! ...,You skillfully swim across the lake.,,You skillfully swim across the lake.,
 1900,0,ｸﾞﾙｰﾌﾟ ﾉ ﾓﾁﾓﾉ,The team's belongings,,The teams belongings,
 1910,0,  ｼｮｸﾘｮｳ :, Food: ,, Food: ,
@@ -106,9 +106,9 @@
 1970,2,ﾏｼﾞｯｸ ｿｰﾄﾞ,Magic Sword,,,
 1970,3,ｼﾞﾌﾞﾝ ﾉ ｳﾃﾞ !!,Bare fists!!  ,自分の腕,,
 2100,0,ﾏﾖｯﾃ ｲﾙﾄｷ ｲｿｸﾞﾄ ﾖｹｲ ﾜｶﾗﾅｸ ﾅﾙﾖ ....,"When you're lost, don't rush--that will make everything worse...",,"When you're lost, don't rush - that will make everything worse...","Lit: When you're lost, don't rush, because you'll get even more lost."
-2105,0,ｲｿｸﾞﾄ ﾂｶﾚﾁｬｳ !ﾂｶﾚﾙｺﾄﾊ ｷﾗｲﾃﾞｽ,Stay together!Save energy!  ,急ぐと敷かれちゃう！・疲れることは嫌いです,"If you rush, you'll get separated! / Being tired is unpleasant.",
+2105,0,ｲｿｸﾞﾄ ﾂｶﾚﾁｬｳ !ﾂｶﾚﾙｺﾄﾊ ｷﾗｲﾃﾞｽ,You'll just wear yourself out! You'd hate to exhaust yourself.,急ぐと敷かれちゃう！・疲れることは嫌いです,"If you rush, you'll get separated! / Being tired is unpleasant.",
 2105,1,ｱｰ ﾂｶﾚﾀ! ｲｷｶﾞ ｷﾚﾙﾖ,"Aah, you're very tired. You're out of breath.",,"Aah, you're very tired. You're panting.",
-2200,0,ﾅﾆﾓ ｳｯﾃﾏｾﾝｶﾞﾅﾆｦ ｶｳﾝﾃﾞｽｶ?,No shops!   Buy what??  ,何も売ってませんが・何を買うんですか？,But there's nothing being sold. / What do you intend to buy?',
+2200,0,ﾅﾆﾓ ｳｯﾃﾏｾﾝｶﾞﾅﾆｦ ｶｳﾝﾃﾞｽｶ?,But no one's selling anything.What did you intend to buy?   ,何も売ってませんが・何を買うんですか？,But there's nothing being sold. / What do you intend to buy?',
 2205,0,"ｱﾅﾀﾊ ﾅﾜﾊﾞｼｺﾞｦ 300Kﾃﾞｶｲ,ｿﾄﾆﾃﾞﾀ",You buy the rope for 300K and leave the pit.,,You buy the rope for 300K and leave the pit,You buy the rope ladder for 300K and leave the pit with it
 2210,0,｢ｲﾗｯｼｬｲ! ﾂｷﾞﾉﾖｳﾅ ﾓﾉｶﾞ ｱﾘﾏｽｶﾞ ﾅﾆﾆ ｼﾏｼｮｳ?｣,｢Welcome. What would you like to buy?｣,,"Welcome. What would you like to buy?""",
 2230,0,ﾄﾞﾚｦ ｶｲﾏｽｶ ? ,What will you buy?,,What will you buy?,
@@ -231,7 +231,7 @@
 5120,1,ﾀｶﾗｦ ｴﾀ!!,You got the treasure!!,,You got the treasure!!,
 5120,2, ,,,,
 5120,3,K  ,,,,
-5250,0,ﾄｸﾆ ｱﾘﾏｾﾝ ﾅﾆﾓ ﾅｲﾖｳﾀﾞﾖｲ ﾃﾝｷﾃﾞｽ!,Not much. Nothing.  Nice day! ,得にありません・何もないようだ・良い天気です！,Not much here. / Doesn't seem to be anything. / It's good weather!,
+5250,0,ﾄｸﾆ ｱﾘﾏｾﾝ ﾅﾆﾓ ﾅｲﾖｳﾀﾞﾖｲ ﾃﾝｷﾃﾞｽ!,There's nothing special.You don't see anything. It's nice weather!      ,得にありません・何もないようだ・良い天気です！,Not much here. / Doesn't seem to be anything. / It's good weather!,
 5500,0,ｸｽﾘｦ ﾓｯﾀ ﾑﾗﾉﾑｽﾒｶﾞ ｱﾗﾜﾚﾀ !!,A village girl carrying medicine appears.,,The girl with the medicine appeared. ,"Medicine"" could be ""bribe"" as well. "
 5520,0,ｳﾜｰｯ!! ,Waa!! ,,Waa,The character is surprised.
 5520,1, ｶﾞﾜﾅﾆ ｵﾁﾀ!, is trapped.,,is trapped.,"Or: ""is fallen into a trap"""
