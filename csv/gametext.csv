@@ -72,7 +72,7 @@
 1230,0,Ok ,,,,
 1330,0,ﾜﾅ ﾆ ｵﾁﾃｼﾏｯﾀ !,You fell in a trap!,罠に落ちてしまった！,You fell in a trap!,
 1340,0,ｳｯ! ﾄﾞｱｰ ﾆ ﾌﾞﾂｹﾀ... ｲﾀｲｾﾞ ｸｿｯ!,"Oof! You ran into the door... Ugh, it hurts!",うっ！ ドアーにぶつけた... いたいぜ くそっ！,"Oof! You ran into the door... Poop, it hurts!",
-1345,0,ﾋﾛﾏﾆ ﾓﾄﾞｯﾃﾗﾚﾅｲﾃﾞｼｮｳ?,"You can’t go back to the King’s Hall, can you?",広間に戻ってられないでしょう？,Were we brought back to the king's hall?,
+1345,0,ﾋﾛﾏﾆ ﾓﾄﾞｯﾃﾗﾚﾅｲﾃﾞｼｮｳ?,"You can't go back to the King's Hall, can you?",広間に戻ってられないでしょう？,Were we brought back to the king's hall?,
 1350,0,ｵｵｻﾏﾊ ｲｯﾀ:｢ﾖｸﾔｯﾀ!! ﾑｽﾒｦ ﾖﾒﾆﾓﾗｯﾃ ﾎｼｲ!!｣,The king says ｢Well Done! I want you to marry my daughter!!｣,,"The king says ""Well Done! I want you to marry my daughter!!""",
 1350,1,ｵｵｻﾏ ﾊ ｲｲﾏｼﾀ:｢ﾏﾀﾞ ｻﾝｿﾞｸﾊ ｲﾙ｡ ﾄｯﾄ ﾄ ｳｾﾛ ! ﾊﾞｶﾓﾉﾒ !｣,The king says ｢There are still bandits. Get out of my sight! Fool!｣,,"The king says ""There are still bandits. Get out of my sight! Fool!""",
 1360,0,ｱﾅﾀﾊ ﾄﾞｳｸﾂｦ ﾄｳﾘﾇｹ ｿﾄﾆ ｽﾍﾞﾘｵﾁﾏｼﾀ｡,You went through the cave.,,You went through the cave.,You went through the cave and exited on the other side.
@@ -135,8 +135,8 @@
 2530,2,ｻﾝｶﾞｲﾏｽ, is there.,,,
 2600,0,ｺｺﾊ ﾄﾞｺﾀﾞｶﾜｶﾗﾅｲ...,I don't know where we are...,,I don't know where we are...,
 2630,0,ﾄｸﾆ ﾅﾆﾓ ﾐｱﾀﾘﾏｾﾝ,You don't find anything interesting.,,You don't find anything interesting,
-2640,0,ｺﾉｸﾆﾉ ｵｵｻﾏ ,The country's king,,The country's king,
-2640,1,ﾄ ﾌﾟﾘﾝｾｽ ,", along with the princess,",,and the princess,
+2640,0,ｺﾉｸﾆﾉ ｵｵｻﾏ ,The king of this land is before you.,,The country's king,
+2640,1,ﾄ ﾌﾟﾘﾝｾｽ ,The king of this land and the princess are before you.,,and the princess,
 2641,0,ｶﾞ ﾒﾉﾏｴﾆ ｲﾙ, is before you.,,are before you.,
 2641,1,"ｺﾉﾍﾔﾊ ﾄﾃﾓﾋﾛｸ,ﾀｸｻﾝﾉ ｷｼﾀﾁｶﾞﾋｶｴﾃｲﾙ",The hall is wide and teeming with knights.,,The hall is wide and teeming with knights,
 2650,0,ﾔﾏﾉﾅｶﾆ ﾋｷｺﾓｯﾀ ｾﾝﾆﾝｶﾞｽﾝﾃﾞｲﾙ,A mountain monk lives here in seclusion.,山の中に引き篭もった仙人が住んでいる,The hermit sailor lives in the mountains,
@@ -148,9 +148,9 @@
 2670,0,ﾀｸｻﾝﾉ ﾌﾞｷｶﾞｳｯﾃｲﾙ,They sell lots of weapons here.,,The sell lots of weapons here,
 2670,1,ｳﾏｿｳﾅ ﾀﾍﾞﾓﾉｶﾞｱﾙ,The food looks tasty.,,The food looks tasty,
 2670,2,ﾌﾝｲｷｶﾞ ﾜﾙｲ..,The mood is awful here.,,The mood is awful here,It refers to the general atmoshpere of the place
-2685,0,ｶﾞｱﾙ, is here.,,is here.,"It could also be ""X exists"" or ""Y are here"""
-2690,0,ﾃﾞｽｸ,Desk,,Desk,
-2692,0,ﾎﾝ,Book,,Book,
+2685,0,ｶﾞｱﾙ, is there.,,is here.,"It could also be ""X exists"" or ""Y are here"""
+2690,0,ﾃﾞｽｸ,A desk,,Desk,
+2692,0,ﾎﾝ,A book,,Book,
 2694,0,ﾔﾌﾞﾚﾀ ﾄﾞｱｰ,A broken door,,A broken door,"It was destroyed by someone, not time."
 2696,0,ﾀｵﾚﾀ ｻﾝｿﾞｸ,A collapsed bandit,,A collapsed bandit,
 2700,0,ﾐﾜﾀｽｶｷﾞﾘ ｷ ﾊﾞｶﾘ....,There are trees everywhere.,,There are trees everywhere,"Lit: Trees, as far as the eye can see"
@@ -190,10 +190,10 @@
 3050,0,ｲｼﾀﾞﾀﾐﾉ ｲｼﾆﾊ:｢S:ｻﾝｿﾞｸﾉ ｽﾐｶ  W:ﾔﾏﾉ ﾁｮｳｼﾞｮｳ｣,"You read the text on the stone slab: S - bandit's hideout, W - mountaintop",,"You read the text on the stone slab: S - bandit's hideout, W - mountaintop",
 3060,0,ﾉｰﾄﾆﾊ:｢ﾀｶﾗﾊ 2000K｣,In the note: ｢The treasure is 2000K｣,,In the note: the treasure is 2000K,
 3060,1,ﾎﾝﾊ ﾀｲｼﾀ ｼｮｳｾﾂﾃﾞﾊ ﾅｶｯﾀ...!?,Were you expecting a great novel...?,,The book is a bad novel,"Not exactly bad, but ""not noteworthy"""
-4520,0,ｺﾉ ｸｽﾘｦｴﾀ!,You got the medicine!,この薬を得た！,,
+4520,0,ｺﾉ ｸｽﾘｦｴﾀ!,units of medicine obtained!,この薬を得た！,,
 4520,1,ﾀﾞﾚｶﾞﾂｶｳﾉ(1-5ｲｶﾞｲ=END),Who will use it? (1-5; any other key=END),だれが使うの(1-5以外=END),"Who will use it? (ha nem 1-5, END)",
 4520,2,ﾂｶｴﾏｾﾝ,You can't use it.,,You can't use it,
-4540,0,ｻﾝﾊ H.P=,'s HP is now ,,,
+4540,0,ｻﾝﾊ H.P=,'s HP is now,,,
 4540,1,ﾄ ﾅｯﾀ,.,,,
 4570,0,ﾏｼﾞｯｸ ｿｰﾄﾞｦ ﾃﾆｲﾚﾀ!!,You got a magic sword!!,,You got a magic sword!!,
 4575,0,ﾜｶｲﾑｽﾒﾆ ﾃｦﾀﾞｽﾉｶ?,Will you take the girl’s hand?,,Do you reach for the girl?,"Could be: ""Do you hold your arm(s) for the girl?"""

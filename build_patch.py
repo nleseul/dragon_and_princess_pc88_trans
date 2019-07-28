@@ -276,6 +276,17 @@ if __name__ == '__main__':
         elif line_number == 303:
             line['tokens'][67:80] = unpack_operations(b'DN$(I)')
 
+        # There's a line in the throne room constructed conditionally based on whether the
+        # princess is supposed to be present. Shift things around so it just has two
+        # whole separate strings to simplify English grammar.
+        elif line_number == 2640:
+            temp_ops = line['tokens'][12:17]
+            line['tokens'][15:18] = []
+            line['tokens'][30:31] = []
+            line['tokens'] += temp_ops
+        elif line_number == 2641:
+            line['tokens'][0:3] = []
+
         # These lines print the names of shops present in the location in town... they contain a prefix
         # string that isn't necessary in English. Remove it.
         elif line_number == 2840 or line_number == 2841 or line_number == 2842:
