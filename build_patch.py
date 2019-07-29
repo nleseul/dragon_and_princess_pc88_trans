@@ -4,6 +4,7 @@ import io
 import os
 import shutil
 import sys
+import textwrap
 
 def import_csv(filename):
     lookup = {}
@@ -450,6 +451,39 @@ if __name__ == '__main__':
         elif line_number == 5250:
             update_random_string(line, 4, 3, 18, 22)
 
+    # Another pass through all the data... split up text that's too long to
+    # fit in 40 characters. We can do this by breaking it up into multiple strings
+    # and putting semicolons between them; the BASIC parser seems smart enough to
+    # line break if the next string would force a word wrap.
+    for line in lines:
+
+        # Skip special text... either multiple strings packed together, or combat text.
+        if line['line_number'] in (570,1040,1395,1610,1620,1630,1650,1760,2105,2200,5250,6050,6115,6920):
+            continue
+
+        new_tokens = []
+
+        for token_index, token in enumerate(line['tokens']):
+            if token['op'] == 0x22:
+                try:
+                    text = token['content'].decode('shift-jis')
+                    max_length = 20 if line['line_number'] == 360 and token_index == 4 else 40
+                    if len(text) > max_length:
+                        for split_text_index, split_text in enumerate(textwrap.wrap(text, max_length, drop_whitespace=False)):
+                            if split_text_index > 0:
+                                new_tokens.append({'op': 0x3b})
+                            new_tokens.append({'op': 0x22, 'terminator': 0x22, 'content': split_text.encode('shift-jis')})
+                        #print(line['line_number'], token_index, )
+                    else:
+                        new_tokens.append(token)
+                except UnicodeDecodeError:
+                    new_tokens.append(token)
+            else:
+                new_tokens.append(token)
+
+        #if len(new_tokens) != len(line['tokens']):
+            #print(line['tokens'], new_tokens)
+        line['tokens'] = new_tokens
 
     output = pack_bytecode(lines)
 
