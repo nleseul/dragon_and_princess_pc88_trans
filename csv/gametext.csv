@@ -116,7 +116,7 @@
 2232,0,"｢ﾀﾞﾝﾅ,ｶﾈｶﾞ ﾀﾘﾏｾﾝｾﾞ!｣","｢Sir, you don't have enough money!｣",,"Sir, you don't have enough money!""","Could be: ""Sir, we don't have enough money"""
 2232,1,｢ﾏｲﾄﾞ ｱﾘｰ!｣,｢Thank you for your patronage!｣,,"Thank you for your patronage!""",
 2240,0,1)ﾛﾝｸﾞ ｿｰﾄﾞ:100K,1) Long Sword: 100K,,1) Long Sword: 100K,
-2240,1,2)ｼｮｰﾄ ｿｰﾄﾞ: 10K,2) Shord Sword: 10K,,2) Shord Sword: 10K,
+2240,1,2)ｼｮｰﾄ ｿｰﾄﾞ: 10K,2) Short Sword: 10K,,2) Shord Sword: 10K,
 2270,0,ﾀﾞﾚｶﾞ ﾓﾁﾏｽｶ( 1 -,Who will use it? (1-,,Who will use it? (1-),
 2270,1,),),,,
 2300,0,ｼｮｸﾘｮｳ 1ｼｮｸﾌﾞﾝ:10K,A portion of food: 10K,,A portion of food: 10K,
@@ -183,12 +183,12 @@
 2900,0,ﾁｬﾔﾊ ｷｮｳﾊ ﾔｽﾐﾉﾖｳﾀﾞ,The teahouse seems to be closed today.,,It seems the teahouse is not open today,
 2910,0,ﾏﾜﾘﾊ ﾔﾌﾞﾀﾞ,There is a thicket here.,,There is a thicket here,Lit: You are surrounded by a thicket
 3000,0,ﾄ ｶｲﾃｱｯﾀ, is written.,,is written here,
-3010,0,ﾃｯﾊﾟﾝ ﾆﾊ:｢SWWSWW｣,On the iron plate, ｢SWWSWW｣,,You see letters on the iron plate: SWWSWW,
-3020,0,ﾋｮｳｼｷ ﾆﾊ:｢WNN｣,On the sign, ｢WNN｣,,The sign reads: WNN,
+3010,0,ﾃｯﾊﾟﾝ ﾆﾊ:｢SWWSWW｣,"On the iron plate, ｢SWWSWW｣",,You see letters on the iron plate: SWWSWW,
+3020,0,ﾋｮｳｼｷ ﾆﾊ:｢WNN｣,"On the sign, ｢WNN｣",,The sign reads: WNN,
 3030,0,ﾁｬﾔﾉｶﾍﾞﾆﾊ:｢ｼﾛ : SSEE  ﾏﾁ : WWNN｣,"On the teahouse's wall, ｢Castle: SSEE, Town: WWNN｣",,"This is written on the teahouse's wall: Castle - SSEE, City - WWNN",
-3040,0,ｷﾉｲﾀ ﾆﾊ:｢SEE｣,On the wooden table, ｢SEE｣,,There are letters on the wooden table: SEE,
+3040,0,ｷﾉｲﾀ ﾆﾊ:｢SEE｣,"On the wooden table, ｢SEE｣",,There are letters on the wooden table: SEE,
 3050,0,ｲｼﾀﾞﾀﾐﾉ ｲｼﾆﾊ:｢S:ｻﾝｿﾞｸﾉ ｽﾐｶ  W:ﾔﾏﾉ ﾁｮｳｼﾞｮｳ｣,"On the stone slab, ｢S:Bandit hideout, W:Mountaintop｣",,"You read the text on the stone slab: S - bandit's hideout, W - mountaintop",
-3060,0,ﾉｰﾄﾆﾊ:｢ﾀｶﾗﾊ 2000K｣,On the note: ｢The treasure is 2000K｣,,In the note: the treasure is 2000K,
+3060,0,ﾉｰﾄﾆﾊ:｢ﾀｶﾗﾊ 2000K｣,"On the note, ｢The treasure is 2000K｣",,In the note: the treasure is 2000K,
 3060,1,ﾎﾝﾊ ﾀｲｼﾀ ｼｮｳｾﾂﾃﾞﾊ ﾅｶｯﾀ...!?,Were you expecting a great novel...?,,The book is a bad novel,"Not exactly bad, but ""not noteworthy"""
 4520,0,ｺﾉ ｸｽﾘｦｴﾀ!,units of medicine obtained!,この薬を得た！,,
 4520,1,ﾀﾞﾚｶﾞﾂｶｳﾉ(1-5ｲｶﾞｲ=END),Who will use it? (1-5; any other key=END),だれが使うの(1-5以外=END),"Who will use it? (ha nem 1-5, END)",
@@ -263,7 +263,7 @@
 6200,0,Hit any key,,,,
 6750,0,> Move : ,,,,
 6780,0,Again !  ,,,,
-6780,1,ｲｹﾏｾﾝ !  ,It's no good!,,Can't do!,"Could mean ""It's hopeless."" ""It's not allowed"" ""Must not do"""
+6780,1,ｲｹﾏｾﾝ !  ,Can't go there!,,Can't do!,"Could mean ""It's hopeless."" ""It's not allowed"" ""Must not do"""
 6840,0,ｻﾝ : ----,,,,
 6840,1,  ｻﾝﾉ Cond. : PW= ,  's Cond. : PW= ,,,
 6840,2, SP= ,,,,
