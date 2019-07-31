@@ -318,7 +318,7 @@ if __name__ == '__main__':
 
             # Now insert commands for the lines we're injecting.
             ops_to_insert = []
-            new_credit_lines = [(3, b'EN translation patch 1.0'), (1, b'by Laszlo Benyi & NLeseul')]
+            new_credit_lines = [(3, b'EN translation patch 1.01'), (1, b'by Laszlo Benyi & NLeseul')]
             if args.easy_mode:
                 new_credit_lines.append((1, b'EASY MODE!!'))
 
